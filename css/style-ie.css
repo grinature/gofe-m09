@@ -58,6 +58,8 @@ header::before {
     background: #482860;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=37)";
 
+    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=37)";
+
 /*    background-color: rgba(72, 40, 95, 0.37);*/
 }
 
