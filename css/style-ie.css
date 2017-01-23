@@ -56,7 +56,6 @@ header::before {
 
 .header-02 {
     background: #482860;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=37)";
 
     filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=37)";
 
@@ -78,9 +77,11 @@ header::before {
 /*.logo .logo_tail {*/
 .logo_tail {
     color: #745083;
-    color: rgba(116, 80, 131, 1.0);
+    color: #745083;
 
-    text-shadow: initial;
+/*    text-shadow: initial;*/
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2,
+            Color=#44000000, Positive='false');    
 }
 
 /* MENU description */
