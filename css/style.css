@@ -1050,8 +1050,6 @@ Testimonial's Location : X,Y == { 23px, 100px} == { 1.4375rem == 2.395833%, 6.25
         all its content down !!!
     */
 
-    float: left;    /* fallback */
-
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -1069,6 +1067,8 @@ Testimonial's Location : X,Y == { 23px, 100px} == { 1.4375rem == 2.395833%, 6.25
 }
 
 .brand-list__item {
+    float: left;    /* fallback when flexbox-Model is a Dream :+) */
+
     margin-right: 6.770833%;    /* 65px == 4.0625rem == 6.770833% */
 
     height: 4rem;    /* 64px */
@@ -1163,7 +1163,6 @@ Testimonial's Location : X,Y == { 23px, 100px} == { 1.4375rem == 2.395833%, 6.25
 .content-02 {
     box-sizing: border-box;
 
-    float: left;    /* fallback */
 
     display: flex;
     align-items: center;
@@ -1181,6 +1180,8 @@ Testimonial's Location : X,Y == { 23px, 100px} == { 1.4375rem == 2.395833%, 6.25
 .company-info,
 .recent-comments,
 .news-categories {
+    float: left;    /* fallback when flexbox-Model is a Dream :+) */
+
     overflow: hidden;
 
     width: 29.6875%;    /* 285px */
