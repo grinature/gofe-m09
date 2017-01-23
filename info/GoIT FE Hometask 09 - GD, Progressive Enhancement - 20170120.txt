@@ -446,4 +446,33 @@ http://stackoverflow.com/questions/9110179/adding-virtualhost-fails-access-forbi
 </VirtualHost>
 
 ==========================================================
+Delete all files and history from remote Git repo without deleting repo itself	
+http://stackoverflow.com/questions/5363857/delete-all-files-and-history-from-remote-git-repo-without-deleting-repo-itself
+
+As I explain in this answer to Delete or remove all history, commits, and branches from a remote Git repo?, you can also achieve the same thing as Ceilingfish's answer (i.e. delete all references/branches/tags in the remote repo) by doing the following:
+
+    Create new empty repo with initial commit:
+
+    mkdir new
+    cd new
+    echo "This is the README" > README.md
+    git init
+    git add .
+    git commit -m "Add README.md (initial commit)"
+
+    Add remote repo as origin:
+
+    git remote add origin <url-to-remote>
+
+    Mirror push to remote:
+
+    git push origin --mirror
+
+That will delete all references/branches/tags in your remote repo, and any dangling commits will probably be garbage collected eventually. From the official Linux Kernel Git documentation for git push (emphasis mine):
+
+    --mirror
+
+    Instead of naming each ref to push, specifies that all refs under refs/ (which includes but is not limited to refs/heads/, refs/remotes/, and refs/tags/) be mirrored to the remote repository. Newly created local refs will be pushed to the remote end, locally updated refs will be force updated on the remote end, and deleted refs will be removed from the remote end.
+
+
 
