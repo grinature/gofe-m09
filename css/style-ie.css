@@ -16,7 +16,7 @@
         );
 */
 
-    -ms-filter: progid:DXImageTransform.Microsoft.gradient(
+    filter: progid:DXImageTransform.Microsoft.gradient(
     startColorstr=#00322539, endColorstr=#00745083
   );
     background-repeat: no-repeat;
