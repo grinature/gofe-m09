@@ -1,0 +1,21 @@
+/* Media-Query based CSS-style
+    for Viewport Range
+        { greater than 960}px + 16px/verticalScrollBar === 976
+*/
+
+.header-01,
+
+.slider,
+.header-03,
+
+.blurbs,
+.content-01,
+.brands,
+.content-02,
+.footer-01 {
+    /* ??????????????????? */
+    min-width: 960px;
+
+    max-width: 1200px;
+
+}

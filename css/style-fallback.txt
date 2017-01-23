@@ -1,0 +1,2 @@
+background-color: #000000;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";

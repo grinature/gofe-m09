@@ -1,0 +1,561 @@
+/*
+* {
+	box-sizing: border-box;
+}
+*/
+
+
+
+body {
+/*    background-image: url("../img/bg-header.jpeg");
+    background-position: 0px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+*/
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+
+/*    background-color: rgba(240, 240, 240, 1.0);*/
+
+/* bgImgSize = 2400 * 846 */
+.media_wrapper {
+/*    height: 846px;
+
+    background-image: url("../img/bg-header.jpeg");
+    background-position: 0 0;
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+*/
+}
+
+/*  a) The Header's BG DIMs are 2400 x 846
+    b) The wrapper-header's Height of 846
+        is the same as for { 769 + 960 } and for { 961 + wider } canvases
+*/
+
+/* 278 +400 + 168 */
+.wrapper-header {
+    height: 846px;
+
+    /* Test Mark-Up */
+/*    background-color: rgba(202, 233, 126, 0.63);&/
+
+/*    background-image: url("../img/bg-header.jpeg");
+    background-position: 0 0;
+    background-repeat: no-repeat;*/
+/*    background-size: contain;*/
+
+background-image:
+    linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.0) 0px,
+        rgba(255, 255, 255, 0.0) 278px,
+        rgba(72, 40, 95, 0.37) 278px,
+        rgba(72, 40, 95, 0.37) 678px,
+        rgba(255, 255, 255, 0.0) 678px,
+        rgba(255, 255, 255, 0.0) 846px
+    ),
+    url("../img/bg-header.jpeg");
+
+    background-position: 0 0, 0 0;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, auto auto;
+
+}
+
+
+/* The wrapper-main DIMs { 1346 } */
+.wrapper-main {
+    height: 1346px;
+
+    /* Test Mark-Up */
+    background-color: rgba(222, 235, 147, 0.45);
+
+    /* Colour spreading { 341 = 1, 339, 1 } */
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1.0) 0px,
+            rgba(50, 37, 57, 1.0) 1px,
+            rgba(116, 80, 131, 1.0) 339px,
+            rgba(0, 0, 0, 1.0) 340px,
+            rgba(255, 255, 255, 1.0) 341px,
+            rgba(255, 255, 255, 1.0) 606px,
+            rgba(255, 255, 200, 0.5) 605px
+        );
+    background-repeat: no-repeat;
+
+
+/*    background-image: linear-gradient(
+        to top,
+        rgba(18, 138, 167, 1.0) 1px,
+        rgba(18, 138, 167, 1.0) 28px,
+
+        rgba(94, 240, 255, 1.0) 29px,
+        rgba(16, 205, 225, 1.0) 30px,
+        rgba(255, 255, 255, 1.0) 175px,
+        rgba(65, 198, 211, 1.0) 176px,
+
+        rgba(15, 138, 171, 1.0) 535px,
+
+        rgba(13, 121, 162, 1.0) 670px,
+        rgba(12, 115, 159, 1.0) 1422px
+    );
+    background-repeat: no-repeat;
+*/
+
+}
+
+/* The wrapper-main DIMs { 1346 } */
+.wrapper-footer {
+    height: 114px;
+
+    /* Test Mark-Up */
+    background-color: rgba(111, 202, 241, 0.45);
+
+    background-image: url("../img/bg-footer.jpeg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+}
+
+
+
+
+/*
+.wrapper-main,
+.wrapper-footer {
+    height: 846px;
+
+    background-image: url("../img/bg-header.jpeg");
+    background-position: 0 0;
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+*/
+
+
+header,
+main,
+footer {
+    margin: 0 auto;
+
+    width: 960px;
+    height: 100%;
+}
+
+
+header {
+    /* Test Mark-Up */
+/*    background-color: rgba(202, 233, 126, 0.63);*/
+}
+
+    /* Test Mark-Up */
+header::before {
+    position: absolute;
+    position: fixed;
+    top: 14px;
+    top: 70vh;
+    left: 14px;
+
+    content: 'Viewport Range { 961 + ... WIDER !!! } px';
+    background-color: blue;
+    color: yellow;
+    font-weight: bold;
+}
+
+main {
+    /* Test Mark-Up */
+    background-color: rgba(46, 90, 175, 0.45);
+
+}
+
+
+footer {
+    /* Test Mark-Up */
+    background-color: rgba(61, 191, 204, 0.45);
+
+}
+
+.header-1st {
+
+    /* Test Mark-Up */
+    background-color: rgba(78, 205, 78, 0.5);
+}
+
+.logo {
+
+    margin-top: 71px;
+    margin-top: 69px;
+
+    float: left;
+
+    color: rgba(255, 255, 255, 1.0);
+
+    font: 3rem/1 "league_gothic", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.030rem;
+}
+
+.logo .logo_tail {
+    color: rgba(116, 80, 131, 1.0);
+}
+
+/* MENU description */
+.menu {
+    float: left;
+
+    font-family: "league_gothic", sans-serif;
+}
+
+/* Photoshop DIMs inclusive { lP,rP,rM + anchorTxt } == 640px = 66,666667%
+    but Menu's is a bit whider after a Browser's rendering !!!!
+
+        => So, I will try to narrow the LeftMarging of the Horizontal MENU !
+*/
+.menu_header {
+    margin-top: 76px;
+    margin-top: 78px;
+    margin-top: 74px;
+    margin-top: 76px;
+
+    margin-left: 17.708333%;    /* 170px */
+    margin-left: 17.39583333333333%;
+
+
+    width: 66.666667%;
+
+}
+
+/* WRONG if I use INLINE. This adds an extra space between the text and the border */
+.menu__item {
+    float: left;
+}
+
+.menu__item_header {
+    margin-right: 2.562500rem; /* 41px / 16px */
+}
+
+.menu__item_header:nth-child(5) {
+    margin-right: 2.450195rem;
+}
+
+.menu__item_header:last-child {
+    margin-right: 0; /* there's no marginRight */
+}
+
+.menu__link {
+    display: block;
+    text-decoration: none;
+
+    text-transform: uppercase;
+}
+
+.menu__link_header {
+/*    border-bottom: 2px solid rgba(237, 191, 255, 1.0);*/
+    border-bottom: 2px solid transparent;
+
+    padding-left: 0.437500rem;    /* 7px / 16px */
+
+    padding-right: 0.312500rem;    /* 5px / 16px */
+    padding-right: 0.230rem;
+
+    color: rgba(255, 255, 255, 1.0);
+
+    font-size: 1.5rem;    /* 24px / 16px */
+    line-height: 1;
+
+}
+
+.menu__link_header:hover {
+    border-bottom: 2px solid rgba(237, 191, 255, 1.0);
+}
+
+/* SLIDER space ....
+
+    ---------------------------------------------------------------------------------------------
+*/
+
+.slider {
+    float: left;
+
+    margin-top: 161px;
+
+    width: 100%;
+
+    background-color: rgba(90, 62, 101, 0.3);
+    background-color: rgba(148, 109, 212, 0.32);
+}
+
+/* The Slider-Item's Dims : 499 x 230 */
+.slider-item {
+    float: left;
+    margin-top: 84px;
+    margin-top: 82px;
+
+
+    width: 52.083333%; /* 500px / 960px */
+    width: 52.383333%;    /* a selected value of 502px */
+
+    /* Test Mark-Up */
+    background-color: rgba(54, 114, 195, 0.78);
+
+
+}
+
+/* Slider-item's Title DIMs :
+        Font-size: 60px / 16px == 3.75rem
+*/
+.slider-item__title {
+    color: rgba(254, 254, 254, 1.0);
+
+    font: 3.75rem/1 "league_gothic", sans-serif;
+    text-transform: capitalize;
+    letter-spacing: -0.03rem;
+}
+
+/* Slider-item's Breaf DIMs :
+        Font-size: 32px / 16px == 2.00rem
+*/
+.slider-item__breaf {
+    margin-top: -2px;
+
+    color: rgba(237, 191, 255, 1.0);
+
+    font: 2rem/1 "league_gothic", sans-serif;
+    text-transform: uppercase;
+}
+
+/* Slider-item's Article DIMs :
+        Font-size: 18px / 16px == 1.125rem
+        Line-Height: 24px / 16px == 1.5rem
+*/
+.slider-item__article {
+    margin-top: 3px;
+
+    color: rgba(255, 255, 255, 1.0);
+
+    font: 1.125rem "open_sanslight", sans-serif;
+    line-height: 1.36;
+
+    letter-spacing: -0.00380rem;
+}
+
+.slider-item__article span:first-child {
+    letter-spacing: -0.0089rem;
+}
+
+.slider-item__article span:last-child {
+    letter-spacing: -0.032rem;
+}
+
+/* Slider-Item Figure Containers Dim's
+    Margin-Left = 120px = 12,5%
+
+    iPhone blurred : 130px x 268px
+    iPhone's Core Picure : 189px x 373px
+    Total Pics's Width :: 261px
+*/
+
+
+/* compresspng.com - online PNG-optimization service
+    The Size optimization for iPhone Pic reduced the size
+    of the original image from 75 to 85 percents !
+*/
+
+.slider-item__figure-container {
+    float: right;
+    position: relative;
+
+    margin-left: 12.5%;    /* 120px */
+    margin-right: 7.916667%; /* 76px */
+
+    width: 27.1875%;    /* 261px */
+    height: 373px;
+
+
+
+    /* Test Mark-Up */
+    background-color: rgba(0, 247, 255, 0.4);
+
+
+}
+
+.slider-item__figure-container::before {
+    content: '';
+    display: block;
+    position: absolute;
+
+    width: 43.295019%; /* 113px of 261px */
+    height: 100%;
+
+    background-image: url("../img/me-iphone-113_220-2bBlurred-min.png");
+    background-position: 0 70px;
+    background-repeat: no-repeat;
+
+    filter: blur(4px);
+}
+
+/*    iPhone's Core Picture DIMs : 191 px x 373px */
+
+.slider-item__figure_core {
+    float: right;
+    position: relative;
+    top: -18px;
+    right: -3px;
+
+    width: 73.180077%;
+    height: 100%;
+
+/*
+    background-image: url("img/me-iphone-191-373-min.png");
+*/
+    background-image: url("../img/me-iphone-191-373-min.png");
+    background-position: 0 0px;
+    background-repeat: no-repeat;
+}
+
+/* PLAY button Diameter is 77px with relation to Core iPhone Width of 191px */
+/* L77 X 93 Y 172 */
+/*        radial-gradient(*/
+/*circle 337px at 93px 172px,*/
+.slider-item__figure_core::after {
+    content: '';
+
+    position: absolute;
+    display: block;
+
+/* It's variant will be precise if an iPhone device would be simmetricl with its Up and Bottom parts, and its PLAY-button is located in the middle ! */
+/*    top: calc(50% - 34px);
+    left: calc(50% - 34px);*/
+
+    /* Here is another variant since the PLAY-button is not located in the middle of the iPhone's height ! */
+    top: 40.214477%;    /* 148px / 373px */
+    left: 29.842932%;    /* 57px / 192px*/
+
+
+    width: 40.314136%;
+    height: 77px;
+
+/*    background-color: rgba(200, 154, 203, 1.0);*/
+
+    /* I have created a Vector-based self-made iPhone PLAY-button in InkScape-software */
+    background-image: url("../img/iPhone-PLAY-button.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    /* Colours of iPhone's PLAY-button */
+    /*
+        border-image:
+            linear-gradient(
+                rgba(213, 183, 225, 1.0) 24px,
+                rgba(255, 255, 255, 1.0) 2px,
+                rgba(204, 204, 204, 1.0) 4px,
+                rgba(70, 50, 79, 1.0) 5px,
+                rgba(204, 204, 204, 1.0) 4px
+        );
+    */
+}
+
+/* Slider's SWITCH DIMs :
+    Margin-Left : 710px, Margin-Top : 94px
+    Width : 83px;    Height : 17px
+
+    A Slider's Item Size: 17px x 17px
+
+    MN !!!! The Slider's SWITCH Dimensions stay the same around all Viewport sizes !!!
+ */
+.slider-switch {
+    clear: both;
+    float: left;
+
+    /* 94px of margin-Top is up to the bottom edge of the slider's Visual wide shadowed background (which spans from the Left side of Viewport till its right edge */
+    margin-top: 120px;
+    margin-left: 73.958333%;    /* 710px of 960px */
+    margin-right: 17.395833%;    /* 167px of 960px */
+
+    padding-left: 2px;
+
+    height: 17px;
+/*    width: auto;*/
+
+    /* Test Mark-Up */
+/*    background-color: rgba(202, 226, 133, 0.93);
+    color: rgba(64, 63, 73, 1.0);*/
+
+
+}
+
+/* Background Colour: rgba(236, 236, 236, 1.0) */
+
+.slider-switch__item {
+    float: left;
+
+/*    margin-right: 4px;*/
+
+    box-sizing: border-box;
+
+    border: 4px solid rgba(64, 63, 73, 0.40);
+/*    border: 4px solid transparent;*/
+
+    border-radius: 50%;
+
+    width: 17px;
+    height: 17px;
+
+    background-color: rgba(64, 63, 73, 0.40);
+    background-clip: content-box;
+
+}
+
+.slider-switch__item:nth-child(n+2) {
+    margin-left: 4px;
+}
+
+.slider-switch__item:hover {
+/*    border: 4px solid rgba(64, 63, 73, 0.40);*/
+
+    background-color: rgba(236, 236, 236, 1.0);
+/*    background-clip: content-box;*/
+}
+
+.slider-switch__item_current {
+    background-color: rgba(236, 236, 236, 1.0);
+}
+
+
+/*
+    Blurbs DIMs { 341 = 339 + 2 * 1px (T & B borders) }
+
+*/
+.blurbs {
+    height: 339px;
+
+    border-top: 1px solid rgba(51, 37, 58, 1.0);
+    border-bottom: 1px solid rgba(29, 47, 55, 1.0);
+
+    /* Test Mark-Up */
+    background-color: rgba(202, 126, 233, 0.23);
+
+/*
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 1.0) 0,
+            rgba(50, 37, 57, 1.0) 1px,
+            rgba(116, 80, 131, 1.0) 339px,
+            rgba(0, 0, 0, 1.0) 340px
+        );
+*/
+
+}

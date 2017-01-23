@@ -1,0 +1,1427 @@
+/*
+* {
+	box-sizing: border-box;
+}
+*/
+
+
+
+body {
+/*    background-image: url("../img/bg-header.jpeg");
+    background-position: 0px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+*/
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+
+
+/*  a) The Header's BG DIMs are 2400 x 846
+    b) The wrapper-header's Height of 846
+        is the same as for { 769 + 960 } and for { 961 + wider } canvases
+*/
+
+/* 278 +400 + 168 */
+.wrapper-header {
+    height: 846px;
+
+    /* Test Mark-Up */
+/*    background-color: rgba(202, 233, 126, 0.63);&/
+
+/*    background-image: url("../img/bg-header.jpeg");
+    background-position: 0 0;
+    background-repeat: no-repeat;*/
+/*    background-size: contain;*/
+
+background-image:
+    url("../img/bg-header.jpeg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+/*    linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.0) 0px,
+        rgba(255, 255, 255, 0.0) 278px,
+        rgba(72, 40, 95, 0.37) 278px,
+        rgba(72, 40, 95, 0.37) 678px,
+        rgba(255, 255, 255, 0.0) 678px,
+        rgba(255, 255, 255, 0.0) 846px
+    ),
+    url("../img/bg-header.jpeg");
+
+    background-position: 0 0, center top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, auto auto;
+*/
+}
+
+
+/* ?????  height: 1346px; */
+
+/* The wrapper-main__blurbs DIMs { 1346 } */
+.wrapper-main__blurbs {
+    border-top: 1px solid rgba(51, 37, 58, 1.0);
+    border-bottom: 1px solid rgba(29, 47, 55, 1.0);
+
+
+
+    /* Colour spreading { 341 = 1, 339, 1 } */
+    background-image:
+        linear-gradient(
+            0deg,
+            rgba(50, 37, 57, 1.0),
+            rgba(116, 80, 131, 1.0)
+        );
+    background-repeat: no-repeat;
+
+}
+
+/* The space for Testimonials and Blog
+    Dims : Height == 488px
+            Wrk Hight for Content == 486px (ie. wo U,B borders)
+*/
+.wrapper-main__content-01 {
+    border-top: 1px solid rgba(13, 21, 27, 1.0);
+    border-bottom: 1px solid rgba(230, 230, 230, 1.0);
+
+    background-color: rgba(249, 249, 249, 1.0);
+
+/*    height: 486px;    */
+}
+
+/* Brands space
+        DIMs : Height == 120px = 118/wrkHeigth + 2*1px/T,B Bords
+*/
+.wrapper-main__brands {
+    box-sizing: border-box;
+    height: 120px;
+
+    border-top: 1px solid rgba(254, 254, 254, 1.0);
+    border-bottom: 1px solid rgba(254, 254, 254, 1.0);
+
+    background-color: rgba(249, 249, 249, 1.0);
+}
+
+.wrapper-main__content-02 {
+    box-sizing: border-box;
+    height: 396px;
+
+    border-top: 1px solid rgba(216, 216, 216, 1.0);
+
+    background-color: rgba(236, 236, 236, 1.0);
+}
+
+/* The wrapper-main DIMs { 1346 } */
+.wrapper-footer {
+    height: 114px;
+
+    background-image: url("../img/bg-footer.jpeg");
+    background-position: center 0;
+    background-repeat: no-repeat;
+}
+
+
+.header-01,
+
+.slider,
+.header-03,
+
+.blurbs,
+.content-01,
+.brands,
+.content-02,
+.footer-01 {
+    margin: 0 auto;
+
+    height: 100%;
+}
+
+
+    /* Test Mark-Up */
+header::before {
+    position: fixed;
+    z-index: 100;
+    top: 14px;
+    top: 70vh;
+    left: 14px;
+
+    content: 'Viewport Range { 961 + ... WIDER !!! } px';
+    background-color: blue;
+    color: yellow;
+    font-weight: bold;
+}
+
+main {
+    /* Test Mark-Up */
+/*    background-color: rgba(46, 90, 175, 0.45);*/
+
+}
+
+
+footer {
+    /* Test Mark-Up */
+/*    background-color: rgba(61, 191, 204, 0.45);*/
+
+}
+
+/* Definitions of Headers  { 01 .. 03 }
+    Header-01 : Logo + menu
+    Header-02 : the Slider's Article and its corresponding Figure
+    Header-03 : the Slider's Switch
+*/
+
+.header-01 {
+    height: 17.375rem;    /* 278px == 17.375rem */
+}
+
+.header-02 {
+    height: 25rem;    /* 400px == 25rem */
+
+    background-color: rgba(72, 40, 95, 0.37);
+}
+
+.header-03 {
+    height: 10.5rem;    /* 168px == 10.5rem */
+}
+
+
+
+
+.header-1st {
+    /* Test Mark-Up */
+/*    background-color: rgba(78, 205, 78, 0.5);*/
+}
+
+.logo {
+
+    margin-top: 71px;
+    margin-top: 69px;
+
+    float: left;
+
+    color: rgba(255, 255, 255, 1.0);
+
+    /* Font-size : 48px == 3rem */
+    font: 3rem/1 "league_gothic", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.030rem;
+
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/*.logo .logo_tail {*/
+.logo_tail {
+    color: rgba(116, 80, 131, 1.0);
+
+    text-shadow: initial;
+}
+
+/* MENU description */
+.menu {
+/*    float: left;*/
+
+    font-family: "league_gothic", sans-serif;
+}
+
+/* Photoshop DIMs inclusive { lP,rP,rM + anchorTxt } == 640px = 66,666667%
+    but Menu's is a bit whider after a Browser's rendering !!!!
+
+        => So, I will try to narrow the LeftMarging of the Horizontal MENU !
+*/
+.menu_header {
+    float: right;
+
+    margin-top: 76px;
+
+    width: 66.666667%;    /* 640px */
+
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* WRONG if I use INLINE. This adds an extra space between the text and the border */
+.menu__item {
+    float: left;
+}
+
+.menu__item_header {
+    /* 41px ==  2.562500rem == 6.40625% of 640px (menu_header) */
+    margin-right: 2.562500rem;
+    margin-right: 6.40625%;
+}
+
+.menu__item_header:nth-child(5) {
+    /* 39,20312px == 2.450195rem == 6.1254875% */
+    margin-right: 2.450195rem;
+    margin-right: 6.1254875%;
+}
+
+.menu__item_header:last-child {
+    margin-right: 0; /* there's no marginRight */
+}
+
+.menu__link {
+    display: block;
+    text-decoration: none;
+
+    text-transform: uppercase;
+}
+
+.menu__link_header {
+/*    border-bottom: 2px solid rgba(237, 191, 255, 1.0);*/
+    border-bottom: 2px solid transparent;
+
+    /* 7px == 0.437500rem == 1.088647% of 640px (menu_header) */
+    padding-left: 0.437500rem;
+    /* But it depends on its parent element LI, not the UL !!!
+    /*padding-left: 1.088647%;*/
+
+    /* 5px == 0.312500rem == 0.777605% of 640px (menu_header) */
+    padding-right: 0.312500rem;
+    /* 3,68px == 0.230rem == 0.575% of 640px (menu_header) */
+    padding-right: 0.230rem;
+    /* But it depends on its parent element LI, not the UL !!!
+    So, this value 0.575% isn't correct ! */
+    /*padding-right: 0.575%;*/
+
+    color: rgba(255, 255, 255, 1.0);
+
+    font-size: 1.5rem;    /* 24px / 16px */
+    line-height: 1;
+
+}
+
+.menu__link_header:hover {
+    border-bottom: 2px solid rgba(237, 191, 255, 1.0);
+}
+
+.menu__item_header .current-page__link {
+    /* 6px == 0.375rem */
+    /* an excerpt from mq-480 */
+    /* padding: 0 6px; */
+
+    border-bottom: 2px solid rgba(237, 191, 255, 1.0);
+}
+/* SLIDER space ....
+
+    ---------------------------------------------------------------------------------------------
+*/
+
+.slider {
+/*    float: left;*/
+
+    position: relative;
+
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* The Slider-Item's Dims : 499 x 230 */
+.slider-item {
+    float: left;
+    margin-top: 84px;
+    margin-top: 82px;
+
+
+    width: 52.083333%; /* 500px / 960px */
+    width: 52.383333%;    /* a selected value of 502px */
+
+
+}
+
+/* Slider-item's Title DIMs :
+        Font-size: 60px / 16px == 3.75rem
+*/
+.slider-item__title {
+    color: rgba(254, 254, 254, 1.0);
+
+    font: 3.75rem/1 "league_gothic", sans-serif;
+    text-transform: capitalize;
+    letter-spacing: -0.03rem;
+
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Slider-item's Breaf DIMs :
+        Font-size: 32px / 16px == 2.00rem
+*/
+.slider-item__breaf {
+    margin-top: -2px;
+
+    color: rgba(237, 191, 255, 1.0);
+
+    font: 2rem/1 "league_gothic", sans-serif;
+    text-transform: uppercase;
+
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Slider-item's Article DIMs :
+        Font-size: 18px / 16px == 1.125rem
+        Line-Height: 24px / 16px == 1.5rem
+*/
+.slider-item__article {
+    margin-top: 3px;
+
+    color: rgba(255, 255, 255, 1.0);
+
+    font: 1.125rem "open_sanslight", sans-serif;
+    line-height: 1.36;
+
+    letter-spacing: -0.00380rem;
+
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.slider-item__article span:first-child {
+    letter-spacing: -0.0089rem;
+}
+
+.slider-item__article span:last-child {
+    letter-spacing: -0.032rem;
+}
+
+/* Slider-Item Figure Containers Dim's
+    Margin-Left = 120px = 12,5%
+
+    iPhone blurred : 130px x 268px
+    iPhone's Core Picture : 189px x 373px
+    Total Pics's Width :: 261px
+*/
+
+
+/* compresspng.com - online PNG-optimization service
+    The Size optimization for iPhone Pic reduced the size
+    of the original image from 75 to 85 percents !
+*/
+
+.slider-item__figure-container {
+    float: right;
+    position: relative;
+
+    /* 120px */
+/*    margin-left: 12.5%;*/
+    margin-right: 7.916667%; /* 76px */
+
+    /* 261px */
+    width: 27.1875%;
+    width: 261px;
+
+    height: 373px;
+
+
+}
+
+.slider-item__figure-container::before {
+    content: '';
+    display: block;
+    position: absolute;
+
+    width: 43.295019%; /* 113px of 261px */
+    height: 100%;
+
+    background-image: url("../img/me-iphone-113_220-2bBlurred-min.png");
+    background-position: 0 70px;
+    background-repeat: no-repeat;
+
+    filter: blur(4px);
+}
+
+/*    iPhone's Core Picture DIMs : 191 px x 373px */
+
+.slider-item__figure_core {
+    float: right;
+    position: relative;
+    top: -18px;
+    right: -3px;
+
+    width: 73.180077%;
+    height: 100%;
+
+/*
+    background-image: url("img/me-iphone-191-373-min.png");
+*/
+    background-image: url("../img/me-iphone-191-373-min.png");
+    background-position: 0 0px;
+    background-repeat: no-repeat;
+}
+
+/* PLAY button Diameter is 77px with relation to Core iPhone Width of 191px */
+/* L77 X 93 Y 172 */
+/*        radial-gradient(*/
+/*circle 337px at 93px 172px,*/
+.slider-item__figure_core::after {
+    content: '';
+
+    position: absolute;
+    display: block;
+
+/* It's variant will be precise if an iPhone device would be simmetricl with its Up and Bottom parts, and its PLAY-button is located in the middle ! */
+/*    top: calc(50% - 34px);
+    left: calc(50% - 34px);*/
+
+    /* Here is another variant since the PLAY-button is not located in the middle of the iPhone's height ! */
+    top: 40.214477%;    /* 148px / 373px */
+    left: 29.842932%;    /* 57px / 192px*/
+
+
+    width: 40.314136%;
+    height: 77px;
+
+/*    background-color: rgba(200, 154, 203, 1.0);*/
+
+    /* I have created a Vector-based self-made iPhone PLAY-button in InkScape-software */
+    background-image: url("../img/iPhone-PLAY-button.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    /* Colours of iPhone's PLAY-button */
+    /*
+        border-image:
+            linear-gradient(
+                rgba(213, 183, 225, 1.0) 24px,
+                rgba(255, 255, 255, 1.0) 2px,
+                rgba(204, 204, 204, 1.0) 4px,
+                rgba(70, 50, 79, 1.0) 5px,
+                rgba(204, 204, 204, 1.0) 4px
+        );
+    */
+}
+
+/* Slider's SWITCH DIMs :
+    Margin-Left : 710px, Margin-Top : 94px
+    Width : 83px;    Height : 17px
+
+    A Slider's Item Size: 17px x 17px
+
+    MN !!!! The Slider's SWITCH Dimensions stay the same around all Viewport sizes !!!
+ */
+.slider-switch {
+    clear: both;
+    float: left;
+
+    /* 94px of margin-Top is up to the bottom edge of the slider's Visual wide shadowed background (which spans from the Left side of Viewport till its right edge */
+    margin-top: 120px;
+    margin-top: 92px;
+
+    margin-left: 73.958333%;    /* 710px of 960px */
+    /* 167px of 960px */
+/*    margin-right: 17.395833%;*/
+
+    padding-left: 2px;
+
+    height: 17px;
+/*    width: auto;*/
+
+}
+
+/* Background Colour: rgba(236, 236, 236, 1.0) */
+
+.slider-switch__item {
+    float: left;
+
+/*    margin-right: 4px;*/
+
+    box-sizing: border-box;
+
+    border: 4px solid rgba(64, 63, 73, 0.40);
+/*    border: 4px solid transparent;*/
+
+    border-radius: 50%;
+
+    width: 17px;
+    height: 17px;
+
+    background-color: rgba(64, 63, 73, 0.40);
+    background-clip: content-box;
+
+}
+
+.slider-switch__item:nth-child(n+2) {
+    margin-left: 4px;
+}
+
+.slider-switch__item:hover {
+/*    border: 4px solid rgba(64, 63, 73, 0.40);*/
+
+    background-color: rgba(236, 236, 236, 1.0);
+/*    background-clip: content-box;*/
+
+    border-color: rgba(236, 236, 236, 1.0);
+}
+
+.slider-switch__item_current {
+    background-color: rgba(236, 236, 236, 1.0);
+}
+
+
+/*
+    Blurbs DIMs: Height { 339 = 341 - 2 * 1px (T & B borders of its Wrapper) }
+
+    Padding-Top: 80 px == 5rem
+
+*/
+.blurbs {
+    box-sizing: border-box;
+
+
+    padding-top: 5rem;
+    padding-top: 4.9375rem;
+    padding-top: 4.875rem;    /* 78px */
+
+    height: 339px;
+
+}
+
+/* Blurb-Item's DIMs :
+    Width x Height: 273 x 190, ==> 273 is now 280px
+
+    Margin-Left : 12px == 0.75rem == 1.25%
+
+*/
+.blurb-item {
+/*    box-sizing: border-box;*/
+    position: relative;
+    float: left;
+
+
+    margin-left: 1.25%;    /* 12px */
+
+    margin-right: 4.6875%;    /* 45px */
+    margin-right: 5.0%;    /* 48px */
+
+    padding-left: 5.208333%;    /* 50px */
+
+    /* 280px for BORDER-BOX, ContentArea will be 223px by Size TOO !!! */
+/*    width: 28.4375%;*/
+
+    /* 230px for box-sizing: PADDING-box */
+    width: 23.95833333333333%;
+
+}
+
+.blurb-item::before {
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: -2px;
+
+    content: '';
+
+    width: 30px;
+    height: 30px;
+
+    background-repeat: no-repeat;
+}
+
+.blurb-item_tool::before {
+    background-image: url("../img/icon-scape-min.png");
+    background-position: -10px -10px;
+}
+
+.blurb-item_mind::before {
+    background-image: url("../img/icon-scape-min.png");
+    background-position: -40px -10px;
+}
+
+.blurb-item_tune::before {
+    background-image: url("../img/icon-scape-min.png");
+    background-position: -70px -10px;
+}
+
+
+.blurb-item:nth-child(3) {
+    margin-right: auto;
+
+    margin-left: 0.8333333333333333%; /* 8px */
+    width: 22.91666666666667%;    /* 220px */
+
+
+    word-spacing: -0.09rem
+
+}
+
+/* a Blurbs Item's Title ::
+    font-size: 30px ==  1.875rem
+
+    Margin-Bottom: 5px = 0.3125rem
+*/
+.blurb-item__title {
+    margin-bottom: 0.3125rem;    /* 5px */
+
+    color: rgba(255, 255, 255, 1.0);
+
+    font: 1.875rem/1 "league_gothic", sans-serif;
+    text-transform: uppercase;
+
+    text-shadow: 2px 2px 0px rgba(15, 21, 24, 0.4);
+}
+
+/* Font-size: 16px = 1rem
+    Line-height : 24px = 1.5rem
+*/
+.blurb-item__brief {
+    overflow: hidden;
+
+    height: 7.5625rem;    /*121px */
+
+    color: rgba(255, 255, 255, 1.0);
+
+    font: 1rem/1.5 "open_sanslight", sans-serif;
+
+    text-shadow: 2px 2px 0px rgba(15, 21, 24, 0.4);
+}
+
+.blurb-item__fullinfo-anchor {
+    display: block;
+
+    margin-top: 1.25rem;    /* 20px */
+    margin-left: 70%;    /* 161px */
+
+    color: rgba(255, 255, 255, 1.0);
+
+    font: 1.125rem/1 "league_gothic", sans-serif;
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    text-shadow: 2px 2px 0px rgba(15, 21, 24, 0.4);
+}
+
+.blurb-item__fullinfo-anchor:hover {
+    text-shadow: 0px 0px 34px rgba(255, 255, 255, 1.0);
+}
+
+
+/* Content section
+
+Testimonial's Location : X,Y == { 23px, 100px} == { 1.4375rem == 2.395833%, 6.25rem }
+
+*/
+.content-01 {
+    box-sizing: border-box;
+    height: 486px;
+
+    padding-top: 6.25rem;
+}
+
+/*
+    Testimonials DIMs ""
+
+    Width : 427px == 44.479167%
+    Height : 272px == 17rem
+
+    A Testimonial's Triangle-zone : 20px x 20px
+*/
+.testimonials {
+    float: left;
+
+    margin-left: 2.395833%;    /* 23px */
+    margin-right: 2.708333%;    /* 26px with relation to the BLOG-container */
+
+    width: 44.479167%;    /* 427px */
+
+}
+
+
+.testimonials-list {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+
+    padding-top: 2rem; /* 32px */
+
+    /* The static value for padLeft could be used to save the Testimonial's Icon's original size
+    if this icon doesn't scaled when we resize the ViewPort */
+    padding-left: 9.133489%;    /* 39px == 2.4375rem == 9.133489% (to testimonials) */
+    padding-left: 2.4375rem;
+
+    padding-right: 8.196721%;    /* 35px == 8.196721% (to testimonials) == 2.1875rem */
+    padding-bottom: 8.899297%;    /* 38px == 8.899297% (to testimonials) == 2.375rem */
+
+    background-color: rgba(255, 255, 255, 1.0);
+    /* Test Mark-Up */
+    /*background-color: cornsilk;*/
+
+    box-shadow: 0px 1px 2px 0px rgba(153, 153, 153, 0.43);
+
+}
+
+/* CSS-Triangle
+    is based on "css-tricks.com/snippets/css/css-triangle/"   - article
+*/
+
+.testimonials-list::after {
+    content: '';
+    /*
+        ◥ (BLACK UPPER RIGHT TRIANGLE) utf-8 character
+        www.utf8icons.com/character/9701/black-upper-right-triangle
+
+        www.w3schools.com/charsets/ref_utf_geometric.asp
+
+        graphemica.com/%E2%97%A5
+    */
+    content: '\25E5';
+
+    display: block;
+    position: absolute;
+
+    bottom: -20px;
+    right: 40px;
+
+/*
+    border-top: 10px solid pink;
+    border-right: 10px solid lime;
+    border-bottom: 10px solid brown;
+    border-left: 10px solid yellow;
+*/
+
+/* The main drawback is the shadow around the whole borders !!! */
+/*
+    border-top: 10px solid rgba(255, 255, 255, 1.0);
+    border-right: 10px solid rgba(255, 255, 255, 1.0);
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+*/
+
+    color: rgba(255, 255, 255, 1.0);
+
+    font-size: 1.5625rem;    /* 25px */
+    text-shadow: 1px 2px 1px rgba(153, 153, 153, 0.43);
+
+}
+
+
+.testimonial-item {
+    position: relative;
+
+    width: 100%;
+
+}
+
+/* Testimonial Item's Title
+    Font-size: 30px == 1.875rem
+
+*/
+.testimonial-item__title {
+    margin-bottom: 0.375rem;    /* 6px */
+
+    color: rgba(69, 69, 69, 1.0);
+
+    font: 1.875rem/1 "league_gothic", sans-serif;
+    text-transform: uppercase;
+
+}
+
+.testimonial-item__title span {
+
+    color: rgba(237, 191, 255, 1.0);
+
+    padding-left: 0.375rem; /* 6px */
+
+}
+
+.testimonial-item__brief {
+    color: rgba(69, 69, 69, 1.0);
+
+    font: 1rem/1.5 "open_sanslight", sans-serif;
+
+    word-break: break-all;
+}
+
+.testimonial-item_icon::before {
+    content: '';
+    display: block;
+    position: absolute;
+
+    left: -62px;
+    top: -16px;
+    top: -12px;
+
+    /* 49px { W, H } === 13.88102% of 353px (testimonial-item) */
+    /*width: 13.88102%;*/
+    width: 3.0625rem;
+
+    height: 3.0625rem;    /* 49px == 3.0625rem */
+/*    height: 49px;*/
+
+    background-image: url("../img/icon-scape-min.png");
+    background-position: -260px -10px;
+    background-repeat: no-repeat;
+
+}
+
+.testimonial-switch:nth-child(2) {
+    text-align: center;
+}
+
+.testimonial-switch {
+    height: 1.1875rem;    /* 19px */
+
+    /* 170px == 39.812646% */
+    /*    margin-left: 39.812646%;*/
+    margin-top: 1.5rem;    /* 24px */
+}
+
+/* DIMs { Size : 19px x 19px } */
+.testimonial-switch__item {
+    display: inline-block;
+    box-sizing: border-box;
+
+    padding: 2px;
+
+    width: 1.1875rem;    /* 19px */
+    height: 1.1875rem;    /* 19px */
+
+    border: 1px solid rgba(236, 236, 236, 1.0);
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 1.0);
+
+}
+
+.testimonial-switch__item:nth-child(n+2) {
+    margin-left: -0.25rem;    /* -4px to eliminate the SPACE-char gap */
+}
+
+.testimonial-switch__item_current::before {
+    content: '';
+    display: block;
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid rgba(69, 69, 69, 1.0);
+    border-radius: 50%;
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(106, 106, 106, 1.0),
+            rgba(69, 69, 69, 1.0)
+        );
+}
+
+.testimonial-switch__item:hover {
+    border-color: rgba(106, 106, 106, 1.0);
+}
+
+
+/* BLOG space
+    DIMs W x H { 450(449)px  x 296px ===  }
+
+*/
+.blog {
+    float: left;
+    box-sizing: border-box;
+    margin-left: 2.395833%;    /* 23px */
+
+    padding-top: 2rem;    /* 32px */
+    padding-left: 0.625rem;    /* 10px == 0.625rem == 1.041667% */
+
+    width: 46.875%;    /* 450px */
+}
+
+/* Blog's Font-size: 30px == 1.875rem */
+.blog__title {
+    margin-bottom: 0.8125rem;    /* 13px */
+
+    color: rgba(69, 69, 69, 1.0);
+
+    font: 1.875rem/1 "league_gothic", sans-serif;
+    text-transform: uppercase;
+}
+
+.blog__list-item {
+    position: relative;
+
+    margin-bottom: 1.1875rem;    /* 19px */
+
+    padding-left: 4.25rem;    /* 68px == 15.454545% == 4.25rem */
+}
+
+
+.blog__list-item:nth-child(2) {
+    margin-bottom: 0.9375rem;    /* 15px */
+}
+
+.blog__list-item:nth-child(3) {
+    margin-bottom: 1.375rem;    /* 22px */
+}
+
+.blog__list-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 49px;
+    height: 49px;
+}
+
+.blog__list-item:first-child::before {
+    background-image: url("../img/icon-scape-min.png");
+    background-position: -310px -10px;
+    background-repeat: no-repeat;
+}
+
+.blog__list-item:nth-child(2)::before {
+    background-image: url("../img/icon-scape-min.png");
+    background-position: -360px -10px;
+    background-repeat: no-repeat;
+}
+
+.blog__list-item:nth-child(3)::before {
+    background-image: url("../img/icon-scape-min.png");
+    background-position: -410px -10px;
+    background-repeat: no-repeat;
+}
+
+.blog__list-item-title {
+    color: rgba(69, 69, 69, 1.0);
+
+    font: 1rem/1.5 "open_sansextrabold", sans-serif;
+}
+
+.blog__list-item-brief {
+    color: rgba(69, 69, 69, 1.0);
+
+    font: 1rem/1.5 "open_sanslight", sans-serif;
+    word-spacing: -0.03rem;
+}
+
+.blog__fullinfo-anchor {
+    float: right;
+/*    display: block;*/
+
+    margin-right: 0.6875rem;    /* 11px */
+
+    font: 1.125rem/1.5 "league_gothic", sans-serif;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: rgba(69, 69, 69, 1.0);
+}
+
+.anchor-02_presence {
+    display: none;
+}
+
+/* Brands DIMs :
+    Size, Margin-Right
+        b<1/BillaBong>
+            Size : 69 x 64
+            MR = 65px ==
+        b<2/dcshoecousa>
+            Size : 72 x 64
+            MR = 65px ==
+        b<3/Element>
+            Size : 65 x 64(65)
+            !!!!!!!
+            MR = 75px ==
+        b<4/AWSM>
+            Size : 50 x 64
+            MR = 65px ==
+        b<5/RVCA>
+            Size : 103 x 64
+            MR = 65px ==
+        b<6/VonZipper>
+            Size : 78 x 64
+            MR
+*/
+
+.brand-list {
+    box-sizing: border-box;
+
+    /* As it turned out, here is the very Important thing for me, for my flex block !!!
+        I have to set WIDTH for 100% !!!!
+        But I need to know the explanation why this helps me not to shrink
+        all its content down !!!
+    */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    align-items: center;
+    align-items: flex-start;
+    padding-top: 1.5625rem;    /* 25px */
+
+    height: 100%;
+
+    /* Test Mark-Up */
+/*    background-color: cornsilk;*/
+
+}
+
+.brand-list__item {
+    margin-right: 6.770833%;    /* 65px == 4.0625rem == 6.770833% */
+
+    height: 4rem;    /* 64px */
+
+}
+
+.brand-list__anchor {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    /*    background-image: url("<some-image-name>");    */
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+}
+
+.brand-list__item_billabong {
+    width: 4.3125rem;    /* 69px == 4.3125rem == 7.1875% (of 960px) */
+}
+
+.brand-list__anchor_billabong {
+    background-image: url("../img/01-brand-icon-Billabong.svg");
+}
+
+
+.brand-list__item_dcshoecousa {
+    width: 4.5rem;    /* 72px == 4.5rem == 7.5% (of 960px) */
+}
+
+.brand-list__anchor_dcshoecousa {
+    background-image: url("../img/02-brand-icon-dcshoecousa.svg");
+}
+
+
+.brand-list__item_element {
+    margin-right: 7.8125%;    /* 75px == 4.6875rem = 7.8125% (of 960px) */
+
+    width: 4.0625rem;    /* 65px == 4.0625rem == 6.770833% (of 960px) */
+}
+
+.brand-list__anchor_element {
+    background-image: url("../img/03-brand-icon-Element.svg");
+}
+
+
+.brand-list__item_awsm {
+    width: 3.125rem;    /* 50px == 3.125rem == 5.208333% (of 960px) */
+}
+
+.brand-list__anchor_awsm {
+    background-image: url("../img/04-brand-icon-AWSM.svg");
+}
+
+
+.brand-list__item_rvca {
+    width: 6.4375rem;    /* 103px == 6.4375rem == 10.729167% (of 960px) */
+}
+
+.brand-list__anchor_rvca {
+    background-image: url("../img/05-brand-icon-RVCA.svg");
+}
+
+
+.brand-list__item_vonzipper {
+
+    width: 4.6875rem;    /* 78px = 4.6875rem == 7.8125% (of 960px) */
+}
+
+.brand-list__anchor_vonzipper {
+    background-image: url("../img/06-brand-icon-VonZipper.svg");
+}
+
+
+.brand-list__item:last-child {
+    margin-right: 0;
+}
+
+
+/*     Content 02 SPACE definitions :
+
+    Screen WIDTHs wider than 768 pixels :
+    a) CompanyInfo and RecentComments blocks are shown.
+    NEWS Blocks are shown in quantity of 1 !!!
+
+    b) News blocks are shown in quantity of 3 here.
+    CompanyInfo and RecentComments blocks are turned OFF !
+
+*/
+
+.content-02 {
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+}
+
+.content-02 article {
+}
+
+/* DIMs
+        W x H { 285px x 205px == 29.6875% x 12,8125rem }
+*/
+.company-info,
+.recent-comments,
+.news-categories {
+    overflow: hidden;
+
+    width: 29.6875%;    /* 285px */
+    height: 12.8125rem;    /* 205px */
+}
+
+/* Font-Size: 48px == 3rem, PS's Line-Height 33.72px == 2,1075rem */
+.company-info__title {
+    margin-bottom: 0.5rem; /* 8px */
+
+    color: rgba(69, 69, 69, 1.0);
+
+    font: 3rem/1 "league_gothic", sans-serif;
+
+    text-transform: uppercase;
+
+    text-shadow: 0px 2px rgba(255, 255, 255, 1.0);
+}
+
+.company-info__title span {
+    color: rgba(185, 185, 185, 1.0);
+}
+
+.company-info__copyright {
+    margin-bottom: 0.5rem; /* 8px */
+
+    color: rgba(197, 197, 197, 1.0);
+
+    font: 1rem/1.5 Georgia, serif;
+    font-style: italic;
+
+    text-shadow: 1px 1px rgba(255, 255, 255, 1.0);
+}
+
+.company-info__brief {
+    color: rgba(120, 120, 120, 1.0);
+
+    font: 1rem/1.5 "open_sanslight", sans-serif;
+
+    text-shadow: 1px 1px rgba(255, 255, 255, 1.0);
+}
+
+
+/* Font DIMs : 30px/24px == 1,875rem/0,8(1.5rem) */
+.recent-comments__title {
+    margin-bottom: 0.5625rem;    /* 9px */
+
+    color: rgba(69, 69, 69, 1.0);
+
+    font: 1.875rem/1 "league_gothic", sans-serif;
+
+    text-transform: uppercase;
+
+    text-shadow: 0px 1px rgba(255, 255, 255, 1.0);
+}
+
+.recent-comments__brief {
+    color: rgba(120, 120, 120, 1.0);
+
+    font: 1rem/1.5 "open_sanslight", sans-serif;
+
+    text-shadow: 1px 1px rgba(255, 255, 255, 1.0);
+}
+
+
+/* News Categories .....
+
+    N.B. NEWS Blocks are shown in quantity of 1 for 768+ screens !!!
+
+*/
+
+.news-categories:nth-child(n+4) {
+    display: none;
+}
+
+/* Font DIMs : 30px/24px == 1,875rem/0,8(1.5rem) */
+.news-categories__title {
+    margin-bottom: 0.5625rem;    /* 9px */
+
+    color: rgba(69, 69, 69, 1.0);
+
+    font: 1.875rem/1 "league_gothic", sans-serif;
+
+    text-transform: uppercase;
+
+    text-shadow: 0px 1px rgba(255, 255, 255, 1.0);
+}
+
+.news-categories__brief {
+    color: rgba(120, 120, 120, 1.0);
+
+    font: 1rem/1.5 "open_sanslight", sans-serif;
+
+    text-shadow: 1px 1px rgba(255, 255, 255, 1.0);
+}
+
+
+/* Footer space goes here .... */
+
+/* DIMS W x H { 550px x 15px === } */
+.menu_footer {
+    float: left;
+    margin-top: 3rem;    /* 48px == 3rem */
+
+    width: 57.291667%;    /* 550px */
+
+}
+
+.menu__item_footer {
+    /* 44px == 2.75rem === 8% of 550px (i.e. menu_footer) */
+    margin-right: 8%;
+
+    /* 30px since I've left L,R-padding for a Menu's Anchor */
+    margin-right: 5.454545%;
+}
+
+.menu__item_footer:last-child {
+    margin-right: 0; /* there's no margin-Right */
+}
+
+.menu__link_footer {
+    border-bottom: 2px solid transparent;
+
+    padding-left: 0.437500rem;    /* 7px */
+    padding-right: 0.437500rem;    /* 7px */
+
+    color: rgba(255, 255, 255, 1.0);
+
+    font-size: 1.25rem;    /* 20px */
+    line-height: 1;
+
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.menu__item_footer:last-child {
+    margin-right: 0;
+}
+
+.menu__item_footer:first-child .menu__link_footer {
+    padding-left: 0;
+}
+
+/* Font-Size { 12px },  Line-Height { 33.72px == 2,1075rem } */
+.author-info {
+    float: right;
+
+    width: 9rem;    /* 144px == 15% of 960 == 9rem */
+    margin-top: 3.375rem;    /* 54px == 3,375rem */
+
+    /* -6px
+        N.B. !!!
+        By design-template the text crosses the 960px boundary
+        There is a negativr-valur roghtMargin.
+        But I turned off it at the moment !
+    */
+    /*margin-right: -0.375rem;    */
+
+    font: 0.75rem/1 "open_sanslight", sans-serif;    /* 12px */
+    /* the Photoshop : 33.72px == 2,1075rem */
+    /*line-height: 2.1075rem;*/
+
+    color: rgba(255, 255, 255, 1.0);
+    /* Test Mark-Up */
+    color: cornsilk;
+
+
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.author-info span {
+    font-family: "open_sansextrabold", sans-serif;
+}
+
+
+/* SLIDER's arrows
+    DIMs W x H { 22 x 34 }
+
+    The initial positions fos screens, viewports :
+        { 960px < } === 318px == 19,875rem left/right away from 960px working zone
+*/
+
+.slider__arrow {
+    position: absolute;
+    top: 11.4375rem;        /* 183px */
+
+    width: 22px;
+    height: 34px;
+
+    background-size: 22px 34px;
+}
+
+.slider__arrow_left {
+    left: -19.875rem;        /* -318px for left edge of the Left Arrow */
+
+    background-image: url("../img/slider-left-angle-bracket.svg");
+}
+
+.slider__arrow_right {
+    /* 318px - 22px == 296px (18,5rem) */
+    right: -19.875rem;    /* -318px for right edge of the Right Arrow */
+
+    background-image: url("../img/slider-right-angle-bracket.svg");
+}
+
+/*
+.slider__arrow_left:hover {
+    background-color: cornsilk;
+    background-color: rgba(78, 205, 78, 0.23);
+}
+
+.slider__arrow_right:hover {
+    background-color: rgba(78, 205, 78, 0.23);
+    background-color: rgba(187, 198, 88, 0.23);
+}
+*/
+
+@media screen and ( max-width : 1840px ) {
+    .slider__arrow_left {
+        left: -9.875rem;
+    }
+
+    .slider__arrow_right {
+        right: -9.875rem;
+    }
+}
+
+@media screen and ( max-width : 1530px ) {
+    /* the Arrow Width : 22px = 1.375rem */
+    .slider__arrow_left {
+        left: -2rem;
+    }
+
+    .slider__arrow_right {
+        right: -2rem;
+    }
+}
+
+@media screen and ( min-width: 977px ) and ( max-width : 1280px ),
+    screen and ( min-width: 786px ) and ( max-width : 976px )
+     {
+    /* the Arrow Width : 22px = 1.375rem */
+    .slider__arrow_left {
+        display: none;
+    }
+
+    .slider__arrow_right {
+        display: none;
+    }
+}

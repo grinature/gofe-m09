@@ -1,0 +1,79 @@
+/* Media-Query based CSS-style
+    for Viewport Range {769 .. 960}px + 16px/verticalScrollBar === 976
+*/
+
+header,
+main,
+footer {
+    width: 100%;
+/*    max-width: 960px;*/
+}
+
+header::before {
+    position: fixed;
+    z-index: 100;
+    top: 70vh;
+    left: 14px;
+
+    content: 'Viewport Range {769 .. 960}px';
+    background-color: blue;
+    color: yellow;
+    font-weight: bold;
+}
+
+.header-01,
+
+.header-03,
+
+.blurbs,
+.content-01,
+.brands,
+.content-02,
+.footer-01 {
+    max-width: 960px;
+
+}
+
+.wrapper-header {
+/*    display: none;*/
+}
+.wrapper-main {
+/*    display: none;*/
+}
+.wrapper-footer {
+/*    display: none;*/
+}
+
+/* Header Space ... */
+
+/* Header MENU */
+
+
+/* 41px ==  2.562500rem == 6.40625% of 640px (menu_header) */
+/*.menu__item_header {
+    margin-right: 6.40625%;
+}*/
+
+/* Header Menu
+
+    Here is the Visual break-point for the Header's menu !
+    So, I decreased the Left margin !
+
+*/
+
+/* The Visual break-point for the Headers's menu starts at 894px
+    in the form of 2-rows of the Header's Menu.
+    So, I decreased the Left margin !
+*/
+.menu__item_header {
+    margin-right: 0.5rem;
+}
+
+
+/* The Footer's Menu ---------------------
+    @947px of content wide
+*/
+
+.menu__item_footer {
+    margin-right: 2.3%;
+}

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>GoIT FE HTML Hometask 07-08</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/reset-em.css">
+    <link rel="stylesheet" href="css/font.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Media-Query based CSS-style for Viewport Range great than 977px (960+16+1) , i.e. for Wide Displays -->
+<!--    <link rel="stylesheet" media="screen and (min-width: 977px)" href="style-mq-wide.css">-->
+
+    <!-- Media-Query based CSS-style for Viewport Range { greater than 960}px + 16px/verticalScrollBar === 976-->
+    <link rel="stylesheet" media="screen and ( min-width: 977px )" href="css/style-mq-wide.css">
+    <!-- Media-Query based CSS-style for Viewport Range {769 .. 960}px + 16px/verticalScrollBar === 976-->
+    <link rel="stylesheet" media="screen and ( min-width: 786px ) and ( max-width: 976px )" href="css/style-mq-960.css">
+    <!-- Media-Query based CSS-style for Viewport Range {481 .. 768}px + 17px/verticalScrollBar === 785 -->
+    <link rel="stylesheet" media="screen and ( min-width: 498px ) and ( max-width: 785px )" href="css/style-mq-768.css">
+    <!-- Media-Query based CSS-style for Viewport Range {321 .. 480}px + 16px/verticalScrollBar === 496 -->
+    <link rel="stylesheet" media="screen and ( min-width: 338px ) and ( max-width: 497px )" href="css/style-mq-480.css">
+    <!-- Media-Query based CSS-style for Viewport Range { 320 }px + 16px/verticalScrollBar === 496 -->
+    <link rel="stylesheet" media="screen and ( max-width: 337px )" href="css/style-mq-320.css">
+
+    <!-- Post Media Queries -->
+    <link rel="stylesheet" href="css/post-mq.css">
+
+    <style>
+/*
+    @media screen and ( min-width: 498px ) and ( max-width: 670px ),
+    ( min-width: 498px ) and ( max-width: 670px)
+     {
+        .blurbs {
+            min-height: 339px;
+            height: auto;
+
+            background-color: springgreen;
+        }
+
+        .blurbs::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+*/
+    </style>
+
+</head>
+<body>
+<!--    <div class="media_wrapper">    -->
+
+    <!-- The whole HEADER Semantical space goes here ... -->
+    <header class="wrapper-header">
+
+        <div class="header-01">
+
+            <!-- Here are Logo and Horizontal Menu -->
+            <nav class="header-1st clearfix">
+                <div class="logo">
+                    pingbull<span class="logo_tail">er</span>
+                </div>
+                <ul class="menu menu_header">
+                    <li class="menu__item menu__item_header"><a href="#" class="menu__link menu__link_header current-page__link">home</a></li>
+                    <li class="menu__item menu__item_header"><a href="#" class="menu__link menu__link_header">about</a></li>
+                    <li class="menu__item menu__item_header"><a href="#" class="menu__link menu__link_header">blog</a></li>
+                    <li class="menu__item menu__item_header"><a href="#" class="menu__link menu__link_header">products</a></li>
+                    <li class="menu__item menu__item_header"><a href="#" class="menu__link menu__link_header">lorem ipsum</a></li>
+                    <li class="menu__item menu__item_header"><a href="#" class="menu__link menu__link_header">dolor sit amet</a></li>
+                </ul>
+            </nav> <!-- eof 1st header -->
+        </div>    <!-- eo header-01 -->
+
+        <div class="header-02">
+            <!-- Here is the Slider containing
+                * Slider Items
+                    => The current item is underlined
+                * Each active slider's item can have a corresponding Image-presentation with possible blurred bg-image behind it !
+                * There is also the Slider SWITCH with corresponding quantity of presented slider's items.
+                    => For the current slider's item, the corresponding slider representation is shown in the form of filled circle
+                    => We can select a slider's item by pointing on its visual representation
+                * There are also Left and Right Arrows to activate the previous or following slider's items
+            -->
+
+            <!-- Here is the SLIDER space -->
+<!--            <div class="wrapper-slider">-->
+
+            <div class="slider">
+                <!-- The slider #2 is active now -->
+                <div class="slider-item">
+                    <h2 class="slider-item__title">lorem ipsum dolor</h2>
+                    <p class="slider-item__breaf">IT WILL MAKE ALL OF YOUR DREAMS COME TRUE</p>
+                    <p class="slider-item__article">
+                        Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper.
+                        <span>In odio nunc, imperdiet eget aliquam quis, euismod id lectus.</span>
+                        <span>Nulla interdum arcu et felis aliquam a tempus lectus lobortis.</span>
+                    </p>
+                </div>
+
+                <!-- the Container to locate a slider-item's CORE visual representation and its corresponding blurred analogue -->
+                <div class="slider-item__figure-container">
+<!--                    <div class="slider-item__figure_blur"></div> -->
+                    <div class="slider-item__figure_core">
+                        <!-- slider-item__figure_core -->
+                    </div>
+                </div>
+
+                <!-- The slider's Navigation ARROWs go here ... -->
+                <div class="slider__arrow slider__arrow_left"></div>
+                <div class="slider__arrow slider__arrow_right"></div>
+
+            </div>    <!-- eof SLIDER space -->
+
+        </div>    <!-- eo header-02 -->
+
+
+        <div class="header-03">
+                <!--  the Slider's SWITCH -->
+                <ul class="slider-switch">
+                    <li class="slider-switch__item"></li>
+<!--                    <li class="slider-switch__item"></li>                    -->
+                    <li class="slider-switch__item slider-switch__item_current"></li>
+                    <li class="slider-switch__item"></li>
+                    <li class="slider-switch__item"></li>
+                </ul>
+
+
+<!--            </div>    -->
+            <!-- eo Wrapper-SLIDER -->
+
+        </div>    <!-- eo header-03 -->
+
+    </header> <!-- eo wrapper-header -->
+
+
+
+    <!-- The whole MAIN Semantical space goes here ... -->
+    <main class="wrapper-main">
+
+        <div class="wrapper-main__blurbs">
+            <!-- Informational blurbs -->
+            <div class="blurbs">
+                <!-- Some blurb's definition goes here ...
+                    ==> the more descriptive form could be reached via the corresponding ANCHOR (reference),
+                        presented below the blurb's Brief logical section
+                -->
+                <article class="blurb-item blurb-item_tool">
+                    <h2 class="blurb-item__title">about our company</h2>
+                    <p class="blurb-item__brief">
+                        Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+                    </p>
+                    <a href="#" class="blurb-item__fullinfo-anchor">read more</a>
+                </article>
+
+                <article class="blurb-item blurb-item_mind">
+                    <h2 class="blurb-item__title">about our company</h2>
+                    <p class="blurb-item__brief">
+                        Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+                    </p>
+                    <a href="#" class="blurb-item__fullinfo-anchor">read more</a>
+                </article>
+
+                <article class="blurb-item blurb-item_tune">
+                    <h2 class="blurb-item__title">about our company</h2>
+                    <p class="blurb-item__brief">
+                        Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+                    </p>
+
+                    <a href="#" class="blurb-item__fullinfo-anchor">read more</a>
+                </article>
+
+            </div>    <!-- eo Blurbs -->
+        </div>    <!-- eo of wrapper-main__blurbs -->
+
+
+        <div class="wrapper-main__content-01">
+            <div class="content-01">
+
+                <div class="testimonials">
+                    <ul class="testimonials-list">
+                        <li class="testimonial-item testimonial-item_icon">
+                            <h2 class="testimonial-item__title">pingbuller<span>starts here</span></h2>
+                            <!-- I suppose this is the short phrase with text ending here in the paragraph !
+                                I don't fix the height of the paragraph to be a rubber block of information, ie. to be RWD-block (e.g. to be narrow but taller) !!! -->
+                            <p class="testimonial-item__brief">
+                                “Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”
+                            </p>
+                            <!-- Otherwise, I have to limit the height of the paragraph and overflow:hidden it ! -->
+<!--
+                            <p class="testimonial-item__brief">
+                                “Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”
+         Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+                            </p>                        -->
+
+                        </li>    <!-- eo testimonial-item -->
+                    </ul>    <!-- eo testimonials-list -->
+
+                    <!-- The switch for testimonials -->
+                    <ul class="testimonial-switch">
+                        <li class="testimonial-switch__item"></li>
+                        <li class="testimonial-switch__item testimonial-switch__item_current"></li>
+                        <li class="testimonial-switch__item"></li>
+                        <li class="testimonial-switch__item"></li>
+                    </ul>
+                </div>    <!-- eo Testimonials -->
+
+                <!-- Here is the BLOG section -->
+                <article class="blog">
+                    <h2 class="blog__title">recent updates</h2>
+                    <ul class="blog__list">
+                        <li class="blog__list-item">
+                            <h4 class="blog__list-item-title">Nunc turpis neque feugiat eget</h4>
+                            <p class="blog__list-item-brief">
+                                Posted by Admin on March 13 2012 in Recent News
+                            </p>
+                        </li>
+                        <li class="blog__list-item">
+                            <h4 class="blog__list-item-title">Nunc turpis neque feugiat eget</h4>
+                            <p class="blog__list-item-brief">
+                                Posted by Admin on March 13 2012 in Category
+                            </p>
+                        </li>
+                        <li class="blog__list-item">
+                            <h4 class="blog__list-item-title">Nunc turpis neque feugiat eget</h4>
+                            <p class="blog__list-item-brief">
+                                Posted by Admin on March 13 2012 in Blog Updates
+                            </p>
+                        </li>
+                    </ul>
+
+                    <a href="#" class="blog__fullinfo-anchor anchor-01_presence">read more here</a>
+                    <a href="#" class="blog__fullinfo-anchor anchor-02_presence">more blog posts</a>
+
+                </article>    <!-- eo Blog -->
+
+            </div>    <!-- eo content-01 -->
+
+        </div>    <!-- eo wrapper-main__content-01 -->
+
+
+        <!-- Brandss acnchor list in the form of ICONs ... -->
+        <div class="wrapper-main__brands">
+            <div class="brands">
+                <ul class="brand-list">
+                    <li class="brand-list__item brand-list__item_billabong">
+                        <a href="http://au.billabong.com/" class="brand-list__anchor brand-list__anchor_billabong"></a>
+                    </li>
+                    <li class="brand-list__item brand-list__item_dcshoecousa">
+                        <a href="http://www.dcshoes.com/" class="brand-list__anchor brand-list__anchor_dcshoecousa"></a>
+                    </li>
+                    <li class="brand-list__item brand-list__item_element">
+                        <a href="https://www.elementbrand.com/" class="brand-list__anchor brand-list__anchor_element"></a>
+                    </li>
+                    <li class="brand-list__item brand-list__item_awsm">
+                        <a href="http://www.awsmbrand.com/" class="brand-list__anchor brand-list__anchor_awsm"></a>
+                    </li>
+                    <li class="brand-list__item brand-list__item_rvca">
+                        <a href="http://au.rvca.com/" class="brand-list__anchor brand-list__anchor_rvca"></a>
+                    </li>
+                    <li class="brand-list__item brand-list__item_vonzipper">
+                        <a href="http://eu.vonzipper.com/" class="brand-list__anchor brand-list__anchor_vonzipper"></a>
+                    </li>
+                </ul>    <!-- eo Brand list -->
+            </div>    <!-- eo Brands -->
+
+        </div>    <!-- eo wrapper-main__brands -->
+
+        <div class="wrapper-main__content-02">
+            <div class="content-02">
+
+                <article class="company-info">
+                    <h4 class="company-info__title">pigbull<span>er</span></h4>
+
+                    <p class="company-info__copyright">
+                        Copyright 2013, Pingbull AS
+                    </p>
+
+                    <p class="company-info__brief">
+                        Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+                    </p>
+                </article>
+
+                <article class="recent-comments">
+                    <h4 class="recent-comments__title">recent comments</h4>
+
+                    <p class="recent-comments__brief">
+                        Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+                    </p>
+
+                </article>
+
+                <article class="news-categories">
+                    <h4 class="news-categories__title">news categories</h4>
+
+                    <p class="news-categories__brief">
+                        Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+                    </p>
+                </article>
+
+                <article class="news-categories">
+                    <h4 class="news-categories__title">news categories</h4>
+
+                    <p class="news-categories__brief">
+                        Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+                    </p>
+                </article>
+
+                <article class="news-categories">
+                    <h4 class="news-categories__title">news categories</h4>
+
+                    <p class="news-categories__brief">
+                        Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+                    </p>
+                </article>
+
+
+            </div>    <!-- eo content-02 -->
+
+        </div>     <!-- eo wrapper-main__content-02 -->
+
+    </main>   <!-- eo MAIN -->
+
+
+    <!-- The whole FOOTER Semantical space goes here ... -->
+    <footer class="wrapper-footer">
+        <div class="footer-01">
+            <!-- Here are Logo and Horizontal Menu-->
+            <nav class="footer-1st">
+                <ul class="menu menu_footer">
+                    <li class="menu__item menu__item_footer"><a href="#" class="menu__link menu__link_footer">home</a></li>
+                    <li class="menu__item menu__item_footer"><a href="#" class="menu__link menu__link_footer">about</a></li>
+                    <li class="menu__item menu__item_footer"><a href="#" class="menu__link menu__link_footer">blog</a></li>
+                    <li class="menu__item menu__item_footer"><a href="#" class="menu__link menu__link_footer">products</a></li>
+                    <li class="menu__item menu__item_footer"><a href="#" class="menu__link menu__link_footer">lorem ipsum</a></li>
+                    <li class="menu__item menu__item_footer"><a href="#" class="menu__link menu__link_footer">dolor sit amet</a></li>
+                </ul>
+            </nav> <!-- eof 1st header -->
+
+            <div class="author-info">
+                Designed by <span>Pingbull AS</span>
+            </div>    <!-- eo Author -->
+
+        </div>    <!-- eo footer-01 -->
+    </footer>    <!-- wrapper-footer -->
+
+</body>    <!-- eo the HTML Document's content -->
+</html>

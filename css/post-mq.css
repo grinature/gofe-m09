@@ -1,0 +1,198 @@
+/* --------------------------------------------------------------
+        Post Mediq Query definitions
+
+-------------------------------------------------------------- */
+
+@media screen and ( min-width: 498px ) and ( max-width: 753px ) {
+/*
+    .blurbs {
+        min-height: 339px;
+        height: auto;
+    }
+
+    .blurbs::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+*/
+    .blurb-item {
+        padding-left: 2.125rem;
+
+        width: 25%;
+    }
+
+    .blog {
+        margin-left: 1.625rem;
+    }
+
+    .blog__title {
+        font-size: 1.5rem;
+    }
+
+    .blog__list-item:nth-child(n) {
+        padding-left: 3.25rem;
+
+        margin-bottom: 1.2125rem;
+    }
+
+    .blog__list-item-title {
+        font-size: 0.85rem;
+    }
+
+    .blog__list-item-brief {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+}
+
+
+
+@media screen and ( min-width: 498px ) and ( max-width: 670px ) {
+    .blurbs {
+        min-height: 339px;
+        height: auto;
+    }
+
+    .blurbs::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+
+    .testimonials {
+        width: 38%;
+    }
+
+    .blog {
+        width: 40%;
+    }
+
+    .blog__title {
+        font-size: 1.5rem;
+    }
+
+    .blog__list-item-title {
+        font-size: 0.9rem;
+        line-height: 1.2;
+    }
+
+    .wrapper-main__brands {
+        height: auto;
+
+        padding-bottom: 1.5rem;
+    }
+
+    .menu_footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: baseline;
+
+        margin-left: 0;
+        width: 100%;
+
+    }
+
+    .menu__item_footer {
+
+    }
+}
+
+
+@media screen and ( min-width: 338px ) and ( max-width: 430px ) {
+    .slider-item__title {
+        font-size: 1.9rem;
+    }
+
+    .slider-item__breaf {
+        font-size: 1.125rem;
+        line-height: 1.4;
+    }
+
+    .blurb-item:nth-child(n) {
+        padding-left: 2.525rem;
+        margin-left: 1.6625rem;
+
+        width: 84.75%;
+    }
+
+    .blurb-item__brief {
+        font-size: 0.95rem;
+        line-height: 1.2;
+    }
+
+    .blurb-item__fullinfo-anchor {
+        margin-top: 0.95rem;
+    }
+
+    .testimonials {
+        width: 82.7%;
+    }
+
+    .testimonial-item__title {
+        font-size: 1.5rem;
+    }
+
+    .testimonial-item__brief {
+        font-size: 0.84rem;
+        line-height: 1.4;
+    }
+
+    .blog {
+        margin-left: 1.625rem;
+        width: 85.75%;
+    }
+
+    .blog__title {
+        font-size: 1.5rem;
+    }
+
+    .blog__list-item-title {
+        font-size: 0.84rem;
+        line-height: 1.3;
+    }
+
+    .blog__list-item-brief {
+        height: 1.14rem;
+        font-size: 0.84em;
+        line-height: 1.4;
+
+    }
+
+    .blog__list-item:nth-child(n) {
+        margin-bottom: 1.125rem;
+    }
+
+
+    .wrapper-main__content-02 {
+
+        height: auto;
+
+    }
+    .content-02 {
+        align-content: space-around;
+        padding-top: 0;
+
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .news-categories {
+        margin-bottom: 1.5rem;
+
+    }
+
+    .news-categories__title {
+        font-size: 1.4rem;
+    }
+
+    .news-categories__brief {
+        min-height: 5.2125rem;
+
+        font-size: 0.8rem;
+        line-height: 1.14rem;
+    }
+}

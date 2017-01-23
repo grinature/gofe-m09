@@ -1,0 +1,15 @@
+﻿1) LeagueGothic
+a) many sights with 'League Gothic' but Adobe Photoshop says there is no 'LeagueGothic'.
+
+b) Probably, I have found LeagueGothic after I saw the name 'League_Gothic-webfont.ttf' a Cherry-file prepared by Gennadiy !!!
+Then I put this word into Google Search ! And the Photoshop at my GrandPa PC worked well !!!!
+
+@ https://github.com/zachleat/BigText/blob/master/demo/css/league-gothic/League_Gothic-webfont.ttf
+from https://github.com/zachleat/BigText/tree/master/demo/css
+
+May be b.2) https://github.com/zenorocha/HTML5-Local-Storage/tree/master/fonts
+
+2) OpenSans Light
+
+3) OpenSans Extrabold
+

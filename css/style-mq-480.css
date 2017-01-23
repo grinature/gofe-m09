@@ -1,0 +1,555 @@
+/* Media-Query based CSS-style
+    for Viewport Range {321 .. 480 } px + 16px/verticalScrollBar
+*/
+
+.wrapper-header {
+    height:548px;
+
+    background-image: url("../img/bg-header-480.jpeg");
+}
+
+.wrapper-main {
+/*    height: 2287px;*/
+}
+
+.wrapper-main__brands {
+    height: 14.375rem;    /* 230px == 14.375rem */
+}
+
+.wrapper-main__content-02 {
+    height: 669px;
+}
+
+
+.wrapper-footer {
+    height: 201px;
+
+    background-image: url("../img/bg-footer-480.jpeg");
+}
+
+header,
+main,
+footer {
+    width: 100%;
+/*    max-width: 960px;*/
+}
+
+header::before {
+    position: fixed;
+    z-index: 100;
+    top: 70vh;
+    left: 14px;
+
+    content: 'Viewport Range { 321 .. 480 }px';
+    background-color: grey;
+    color: yellow;
+    font-weight: bold;
+}
+
+
+/* Definitions of Headers  { 01 .. 03 }
+    Header-01 : Logo + menu
+    Header-02 : the Slider's Article and its corresponding Figure
+    Header-03 : the Slider's Switch
+*/
+
+.header-01 {
+    height: 12.6875rem;    /* 203px == 12.6875rem */
+}
+
+.header-02 {
+    height: 15.375rem;    /* 246px == 15.375rem */
+}
+
+.header-03 {
+    height: 6.1875rem;    /* 99px == 6.1875rem */
+}
+
+
+.logo {
+    margin-left: 10.3125rem;    /* 165px == 10.3125rem */
+}
+
+/* Definitions of the HEADER's Menu
+    in the Vertical Presentation
+*/
+.header-1st {
+    position: relative;
+}
+
+/* the Vertical Menu
+    W x H { 246 x 259, incl T/B, L/R borders of 1px width }
+*/
+
+.menu_header {
+    visibility: hidden;
+
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 400;
+    left: calc( 50% - 51.25% / 2 );
+
+    top: 8.1875rem;    /* 131px == 8.1875rem */
+
+    margin: 0;
+
+    width: 51.25%;    /* 246(244+2)px == 51.25% of 480px */
+
+    border: 1px solid rgba(28, 37, 42, 1.0);
+    border-radius: 8px;
+
+    background-color: rgba(54, 41, 62, 0.85);
+}
+
+
+.menu__item {
+}
+
+.menu__item_header:nth-child(n) {
+    box-sizing: border-box;
+    float: none;
+
+    display: list-item;
+
+    margin: 0;
+
+    border-top: 1px solid rgba(82, 62, 90, 1.0);
+    border-bottom: 1px solid rgba(54, 40, 62, 1.0);
+
+    text-align: center;
+}
+
+.menu__item_header:first-child {
+    padding-top: 5px;
+
+    border-top-color: rgba(123, 85, 144, 1.0);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.menu__item_header:last-child {
+    padding-bottom: 5px;
+
+    border-bottom-style: none;
+
+    height: 2.5625rem;    /* 41px == 2.5625rem */
+}
+
+.menu__link_header {
+    margin: 0;
+    padding: 0;
+
+    border-bottom: 2px solid transparent;
+
+    line-height: 2.625rem;    /* 42px == 2.625rem */
+    line-height: 2.375rem;    /* 38px == 2.375rem */
+}
+
+.menu__link_header:hover {
+    border-bottom: 2px solid rgba(237, 191, 255, 1.0);
+
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.menu__item_header:last-child .menu__link_header {
+    max-height: 2.0625rem;    /* 33px == 2.0625rem */
+}
+
+.menu__item_header .current-page__link {
+    display: inline;
+
+    padding: 0 6px;
+
+    border-bottom: 2px solid rgba(237, 191, 255, 1.0);
+}
+
+
+.current-page__link {
+    visibility: visible;
+}
+
+.menu_header:hover {
+    visibility: visible;
+}
+
+/*    Header-02 : the Slider's Article and its corresponding Figure:
+    Slider's Item DIMs :
+        Width x Height { 206px x 54px }
+*/
+.slider-item {
+    margin-top: 6rem;    /* 96px == 6rem */
+    margin-left: 2.5rem;    /* 40px == 2.5rem */
+
+    width: 43%;    /* 206px == 43% of 480px */
+    height: 3.375rem;    /* 54px == 3.375rem */
+    overflow: hidden;
+}
+
+.slider-item__title {
+    font-size: 2.25rem;    /* 36px == 2.25rem */
+
+    letter-spacing: normal;
+    word-spacing: -0.0625rem;    /* -1px == -0.0625rem */
+}
+
+.slider-item__breaf {
+    margin-top: 0.0625rem;    /* 1px == 0.0625rem */
+
+    font-size: 1.125rem;    /* 18px == 1.125rem */
+}
+
+.slider-item__article {
+    display: none;
+}
+
+/* Slider-Item Figure Containers Dim's
+
+    iPhone blurred : ?? <**>px x 156px
+    iPhone's Core Picture : 134px x 261px
+
+    Total Pics's Width x Height :: 183px x 261px
+*/
+
+.slider-item__figure-container {
+    /* 34px == 2.125rem == 7.09% */
+    margin-right: 2.125rem;
+
+    /* !!!! Absolute positioning */
+    position: absolute;
+    top: -1px;
+    right: 37px;
+    margin-right: 0;
+
+
+
+    /* 183px == 11.4375rem == 38.125% of 480 */
+    width: 183px;
+    width: 38.125%;
+    height: 16.3125rem;    /* 261px == 16.3125rem */
+}
+
+.slider-item__figure-container::before {
+    background-position: 0 52px;
+
+    background-size: auto 156px;
+    background-size: 100% auto;
+}
+
+.slider-item__figure_core {
+    top: -0.5625rem;    /* -9px == -0.5625rem */
+
+    /* 134px == 8.375rem == 73.22% of Slider's FigContainer */
+    width: 8.375rem;
+    width: 73.22%;
+    height: 100%;
+
+    /* the iPhone's Fig Width : 134 px */
+    background-size: 8.375rem auto;
+
+    background-size: 100% auto;
+}
+
+.slider-item__figure_core::after {
+    width: 40.3%;    /* 54px == 40.3% */
+    height: 54px;
+}
+
+/* SLIDER's arrows
+    DIMs W x H { 22 x 34 }
+*/
+
+.slider__arrow {
+    top: 6.625rem;    /* 106px == 6.625rem */
+}
+.slider__arrow_left {
+    left: 0;
+}
+
+.slider__arrow_right {
+    right: 0;
+}
+
+/* Slider's SWITCH */
+.slider-switch {
+    margin-top: 0.4375rem;
+
+    /* !!!! It is the right Value for margin-TOP
+        when the Absolute-positioning is ON
+        for slider-item__figure-container */
+    margin-top: 1.4375rem;    /* 23px == 1.4375rem */
+
+    margin-left: 42.5%;        /* 204px == 42.5% of 480px */
+}
+
+/*
+    Blurbs DIMs: Height { 596px }
+
+    Padding-Top: 80(*79) px == 5rem  }
+
+*/
+
+.blurbs {
+    padding-top: 5rem;    /* 80px == 5rem */
+    padding-top: 4.9375rem;    /* 79px == 4.9375rem */
+
+    height: 37.25rem;    /* 596px == 37.25rem */
+}
+
+/* Blurb Item's DIMs :
+
+    Width x Height: 426 x 128
+    Margin-Left : 34px == 2.125rem == 7.08%
+
+*/
+
+.blurb-item:nth-child(n) {
+    box-sizing: border-box;
+
+    /* 32px == 2rem */
+    margin-left: 2rem;
+    margin-left: 2.0625rem;    /* 33px */
+
+    margin-right: 0;    /* !!! */
+
+    margin-bottom: 1.5rem;    /* 24px */
+
+    padding-left: 3rem;    /* 48px => The % isn't used to look more attractive */
+    padding-left: 3.125rem;    /* 50px */
+
+    width: 88.75%;    /* 426px == 88.75% of 480px */
+
+    word-spacing: -0.04rem;
+}
+
+.blurb-item:nth-child(2) {
+    margin-bottom: 1.75rem;    /* 28px == 1.75rem */
+}
+
+.blurb-item::before {
+    top: 2px;
+}
+
+
+.blurb-item__title {
+    margin-bottom: 0.0625rem;    /* 1px == 0.0625 */
+
+    font-size: 1.5rem;    /* 24px == 1.5rem */
+}
+
+.blurb-item__brief {
+    max-height: 4.375rem;    /* 70px == 4.375rem */
+
+}
+
+.blurb-item__fullinfo-anchor {
+    float: right;
+
+    /* 20px == 1.25rem */
+    margin-top: 1.25rem;
+    margin-right: 0.375rem;    /* 6px == 0.375rem */
+}
+
+
+.content-01 {
+    height: 786px;
+
+    padding-top: 4.375rem;    /* 70px == 4.375rem */
+}
+
+/* Testimonial Item's DIMs : 416px x 272    */
+.testimonials {
+    margin-left: 2.75rem;    /* 44px == 2.75rem */
+    margin-right: 0;
+
+    width: 86.7%;    /* 416px == 86.66666666 */
+}
+
+.testimonials-list {
+    padding-top: 1.8125rem;    /* 29px == 1.8125rem */
+    padding-bottom: 2.0625rem;    /* 33px == 2.0625rem */
+    padding-bottom: 2.3125rem;    /* 37px == 2.3125rem */
+}
+
+.testimonials-list::after {
+    display: none;
+}
+
+
+.testimonial-item_icon::before {
+    left: -63px;
+    top: -10px;
+}
+
+.testimonial-item__title {
+    margin-bottom: 12px;
+}
+
+.testimonial-item__title span {
+    padding-left: 0.3125rem;    /* 5px == 0.3125rem */
+}
+
+.testimonial-item__brief {
+    max-height: 10.3125rem;    /* 165px == 10.3125rem */
+}
+
+
+.testimonial-switch:nth-child(2) {
+    margin-top: 1.375rem;    /* 22px == 1.375rem */
+    margin-left: -0.9375rem;    /* -15px == -0.9375rem */
+}
+
+
+/* Blogs Definitions ...
+    Full Blog space DIM's { 354 x 302px }
+*/
+
+.blog {
+    margin-top: 1.0625rem;    /* 17px == 1.0625rem    */
+    margin-left: 4.625rem;    /* 74px == 4.625rem */
+
+    width: 73.75%;    /* 354px == 73.75% of 480px */
+}
+
+.blog__list-item {
+    padding-left: 4.125rem;    /* 66px == 4.125rem */
+}
+
+.blog__list-item:first-child::before {
+    background-image: url("../img/icon-scape-min.png");
+    background-position: -610px -10px;
+}
+
+.blog__list-item:nth-child(2)::before {
+    background-image: url("../img/icon-scape-min.png");
+    background-position: -660px -10px;
+}
+
+.blog__list-item:nth-child(3)::before {
+    background-image: url("../img/icon-scape-min.png");
+    background-position: -710px -10px;
+}
+
+
+.blog__list-item:first-child {
+    margin-bottom: 1.3125rem;    /* 21px == 1.3125rem */
+}
+
+.blog__list-item:nth-child(2) {
+    margin-bottom: 1.125rem;    /* 18px == 1.125rem */
+}
+
+.blog__list-item:nth-child(3) {
+    margin-bottom: 1.125rem;    /* 18px == 1.125rem */
+}
+
+
+.blog__list-item-brief {
+    overflow: hidden;
+    max-width: 16rem;    /* 256px == 16rem */
+    height: 1.5rem;
+
+    word-spacing: -0.028rem;
+}
+
+
+.anchor-01_presence {
+    display: none;
+}
+
+.anchor-02_presence {
+    display: block;
+}
+
+.blog__fullinfo-anchor {
+    margin-right: 0.5rem;    /* 8px == 0.5rem */
+}
+
+
+/* Brand LIST lives here ... */
+.brand-list {
+    padding-top: 4%;
+    padding-bottom: 4%;
+
+    align-items: center;
+
+
+}
+
+.brand-list__item {
+    margin-right: 14.77%;
+}
+
+/*     Content 02 SPACE definitions :
+
+    a) CompanyInfo, RecentComments are OFF.
+    b) News blocks are ON !
+
+*/
+
+.content-02 {
+    align-content: flex-start;
+    justify-content: space-around;
+
+    padding-top: 5.125rem;    /* 82px == 5.125rem */
+}
+
+
+.company-info,
+.recent-comments {
+    display: none;
+}
+
+
+.news-categories {
+    display: block;
+    width: 27.083333%;    /* 208px == 27.083333% */
+
+    height: auto;
+
+    margin-bottom: 3.5rem;    /* 56px == 3.5rem */
+    margin-bottom: 3.75rem;    /* 60px == 3.75rem */
+
+    /* ????????????????? ist das gut ??? */
+    margin-left: -0.25rem;    /* -4px == -0.25rem */
+}
+
+.news-categories__title {
+    font-size: 1.5rem;
+}
+
+.news-categories:nth-child(n) {
+    display: block;
+    width: 91.66%;    /* 440px == 91.66% */
+}
+
+.news-categories__title {
+    font-size: 1.5rem;
+}
+
+.news-categories__brief {
+    overflow: hidden;
+
+    max-height: 5.8125rem; /* 93px == 5.8125rem */
+}
+
+
+.menu_footer {
+    box-sizing: border-box;
+
+    margin-top: 3.125rem;    /* 50px == 3.125rem */
+
+    padding-left: 1.375rem;    /* 22px == 1.375rem */
+
+    width: 100%;
+}
+
+.menu__item_footer {
+    margin-right: 2.2%;
+    margin-right: 2.29%;
+}
+
+.author-info {
+    margin-right: 34.42%;
+
+    margin-top: 1.9375rem;    /* 31px == 1.9375rem */
+}
