@@ -211,8 +211,9 @@ header::before {
 
 .blurb-item__fullinfo-anchor:hover {
 /*    text-shadow: 0px 0px 34px rgba(255, 255, 255, 1.0);*/
-    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=0,
-        Color=#ffffffff, Positive='true');
+/*    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=0,
+        Color=#ffffffff, Positive='true');*/
+    filter: progid:DXImageTransform.Microsoft.Glow(Color=white,Strength=24);
 
 }
 
