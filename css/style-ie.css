@@ -65,9 +65,6 @@ header::before {
 .logo {
     color: #ffffff;
 
-    -ms-filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2,
-            Color=#44000000, Positive='true');
-
     filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2,
             Color=#44000000, Positive='true');
 
@@ -81,94 +78,29 @@ header::before {
 
 /*    text-shadow: initial;*/
     filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2,
-            Color=#44000000, Positive='false');    
+            Color=#44000000, Positive='false');
 }
 
-/* MENU description */
-.menu {
-/*    float: left;*/
-
-    font-family: "league_gothic", sans-serif;
-}
-
-/* Photoshop DIMs inclusive { lP,rP,rM + anchorTxt } == 640px = 66,666667%
-    but Menu's is a bit whider after a Browser's rendering !!!!
-
-        => So, I will try to narrow the LeftMarging of the Horizontal MENU !
-*/
 .menu_header {
-    float: right;
+/*    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);*/
 
-    margin-top: 76px;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2,
+            Color=#70000000, Positive='true');
 
-    width: 66.666667%;    /* 640px */
-
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
-}
-
-/* WRONG if I use INLINE. This adds an extra space between the text and the border */
-.menu__item {
-    float: left;
-}
-
-.menu__item_header {
-    /* 41px ==  2.562500rem == 6.40625% of 640px (menu_header) */
-    margin-right: 2.562500rem;
-    margin-right: 6.40625%;
-}
-
-.menu__item_header:nth-child(5) {
-    /* 39,20312px == 2.450195rem == 6.1254875% */
-    margin-right: 2.450195rem;
-    margin-right: 6.1254875%;
-}
-
-.menu__item_header:last-child {
-    margin-right: 0; /* there's no marginRight */
-}
-
-.menu__link {
-    display: block;
-    text-decoration: none;
-
-    text-transform: uppercase;
 }
 
 .menu__link_header {
-/*    border-bottom: 2px solid rgba(237, 191, 255, 1.0);*/
-    border-bottom: 2px solid transparent;
-
-    /* 7px == 0.437500rem == 1.088647% of 640px (menu_header) */
-    padding-left: 0.437500rem;
-    /* But it depends on its parent element LI, not the UL !!!
-    /*padding-left: 1.088647%;*/
-
-    /* 5px == 0.312500rem == 0.777605% of 640px (menu_header) */
-    padding-right: 0.312500rem;
-    /* 3,68px == 0.230rem == 0.575% of 640px (menu_header) */
-    padding-right: 0.230rem;
-    /* But it depends on its parent element LI, not the UL !!!
-    So, this value 0.575% isn't correct ! */
-    /*padding-right: 0.575%;*/
 
     color: #ffffff;
-    color: rgba(255, 255, 255, 1.0);
-
-    font-size: 1.5rem;    /* 24px / 16px */
-    line-height: 1;
 
 }
 
 .menu__link_header:hover {
-    border-bottom: 2px solid rgba(237, 191, 255, 1.0);
+    border-bottom: 2px solid #edbfff;
 }
 
 .menu__item_header .current-page__link {
-    /* 6px == 0.375rem */
-    /* an excerpt from mq-480 */
-    /* padding: 0 6px; */
-
-    border-bottom: 2px solid rgba(237, 191, 255, 1.0);
+    border-bottom: 2px solid #edbfff;
 }
 /* SLIDER space ....
 
@@ -178,28 +110,8 @@ header::before {
 .slider {
 /*    float: left;*/
 
-    position: relative;
-
-    width: 100%;
-
     background: #000000;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
-
-
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-/* The Slider-Item's Dims : 499 x 230 */
-.slider-item {
-    float: left;
-    margin-top: 84px;
-    margin-top: 82px;
-
-
-    width: 52.083333%; /* 500px / 960px */
-    width: 52.383333%;    /* a selected value of 502px */
-
-
+    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
 }
 
 /* Slider-item's Title DIMs :
@@ -208,29 +120,21 @@ header::before {
 .slider-item__title {
     color: #fefefe;
 
-    color: rgba(254, 254, 254, 1.0);
+/*    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);*/
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2,
+            Color=#4D000000, Positive='true');
 
-    font: 3.75rem/1 "league_gothic", sans-serif;
-    text-transform: capitalize;
-    letter-spacing: -0.03rem;
-
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Slider-item's Breaf DIMs :
         Font-size: 32px / 16px == 2.00rem
 */
 .slider-item__breaf {
-    margin-top: -2px;
-
     color: #edbfff;
 
-    color: rgba(237, 191, 255, 1.0);
-
-    font: 2rem/1 "league_gothic", sans-serif;
-    text-transform: uppercase;
-
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    /*    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);*/
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2,
+                Color=#4D000000, Positive='true');
 }
 
 /* Slider-item's Article DIMs :
@@ -238,191 +142,32 @@ header::before {
         Line-Height: 24px / 16px == 1.5rem
 */
 .slider-item__article {
-    margin-top: 3px;
-
     color: #edbfff;
 
-    color: rgba(255, 255, 255, 1.0);
+/*    color: #ffffff;*/
 
-    font: 1.125rem "open_sanslight", sans-serif;
-    line-height: 1.36;
-
-    letter-spacing: -0.00380rem;
-
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-}
-
-.slider-item__article span:first-child {
-    letter-spacing: -0.0089rem;
-}
-
-.slider-item__article span:last-child {
-    letter-spacing: -0.032rem;
-}
-
-/* Slider-Item Figure Containers Dim's
-    Margin-Left = 120px = 12,5%
-
-    iPhone blurred : 130px x 268px
-    iPhone's Core Picture : 189px x 373px
-    Total Pics's Width :: 261px
-*/
-
-
-/* compresspng.com - online PNG-optimization service
-    The Size optimization for iPhone Pic reduced the size
-    of the original image from 75 to 85 percents !
-*/
-
-.slider-item__figure-container {
-    float: right;
-    position: relative;
-
-    /* 120px */
-/*    margin-left: 12.5%;*/
-    margin-right: 7.916667%; /* 76px */
-
-    /* 261px */
-    width: 27.1875%;
-    width: 261px;
-
-    height: 373px;
-
+    /*    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);*/
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2,
+                Color=#4D000000, Positive='true');
 
 }
 
 .slider-item__figure-container::before {
-    content: '';
-    display: block;
-    position: absolute;
+/*    background-image: url("../img/me-iphone-113_220-2bBlurred-min.png");
 
-    width: 43.295019%; /* 113px of 261px */
-    height: 100%;
-
-    background-image: url("../img/me-iphone-113_220-2bBlurred-min.png");
-    background-position: 0 70px;
-    background-repeat: no-repeat;
-
-    filter: blur(4px);
-}
-
-/*    iPhone's Core Picture DIMs : 191 px x 373px */
-
-.slider-item__figure_core {
-    float: right;
-    position: relative;
-    top: -18px;
-    right: -3px;
-
-    width: 73.180077%;
-    height: 100%;
-
-/*
-    background-image: url("img/me-iphone-191-373-min.png");
-*/
-    background-image: url("../img/me-iphone-191-373-min.png");
-    background-position: 0 0px;
-    background-repeat: no-repeat;
-}
-
-/* PLAY button Diameter is 77px with relation to Core iPhone Width of 191px */
-/* L77 X 93 Y 172 */
-/*        radial-gradient(*/
-/*circle 337px at 93px 172px,*/
-.slider-item__figure_core::after {
-    content: '';
-
-    position: absolute;
-    display: block;
-
-/* It's variant will be precise if an iPhone device would be simmetricl with its Up and Bottom parts, and its PLAY-button is located in the middle ! */
-/*    top: calc(50% - 34px);
-    left: calc(50% - 34px);*/
-
-    /* Here is another variant since the PLAY-button is not located in the middle of the iPhone's height ! */
-    top: 40.214477%;    /* 148px / 373px */
-    left: 29.842932%;    /* 57px / 192px*/
-
-
-    width: 40.314136%;
-    height: 77px;
-
-/*    background-color: rgba(200, 154, 203, 1.0);*/
-
-    /* I have created a Vector-based self-made iPhone PLAY-button in InkScape-software */
-    background-image: url("../img/iPhone-PLAY-button.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    /* Colours of iPhone's PLAY-button */
-    /*
-        border-image:
-            linear-gradient(
-                rgba(213, 183, 225, 1.0) 24px,
-                rgba(255, 255, 255, 1.0) 2px,
-                rgba(204, 204, 204, 1.0) 4px,
-                rgba(70, 50, 79, 1.0) 5px,
-                rgba(204, 204, 204, 1.0) 4px
-        );
-    */
-}
-
-/* Slider's SWITCH DIMs :
-    Margin-Left : 710px, Margin-Top : 94px
-    Width : 83px;    Height : 17px
-
-    A Slider's Item Size: 17px x 17px
-
-    MN !!!! The Slider's SWITCH Dimensions stay the same around all Viewport sizes !!!
- */
-.slider-switch {
-    clear: both;
-    float: left;
-
-    /* 94px of margin-Top is up to the bottom edge of the slider's Visual wide shadowed background (which spans from the Left side of Viewport till its right edge */
-    margin-top: 120px;
-    margin-top: 92px;
-
-    margin-left: 73.958333%;    /* 710px of 960px */
-    /* 167px of 960px */
-/*    margin-right: 17.395833%;*/
-
-    padding-left: 2px;
-
-    height: 17px;
-/*    width: auto;*/
-
+    filter: blur(4px);*/
 }
 
 /* Background Colour: rgba(236, 236, 236, 1.0) */
 
 .slider-switch__item {
-    float: left;
-
-/*    margin-right: 4px;*/
-
-    box-sizing: border-box;
-
-    border: 4px solid rgba(64, 63, 73, 0.40);
+/*    border: 4px solid rgba(#403f49, 0.4);*/
+    border: 4px solid #403f49;
 /*    border: 4px solid transparent;*/
 
-    border-radius: 50%;
-
-    width: 17px;
-    height: 17px;
-
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
     background: #403f49;
 
-    background-color: rgba(64, 63, 73, 0.40);
-
-    background-clip: content-box;
-
-}
-
-.slider-switch__item:nth-child(n+2) {
-    margin-left: 4px;
 }
 
 .slider-switch__item:hover {
@@ -430,125 +175,21 @@ header::before {
 
     background: #ececec;
 
-    background-color: rgba(236, 236, 236, 1.0);
-/*    background-clip: content-box;*/
-
-
     border-color: #ececec;
-
-    border-color: rgba(236, 236, 236, 1.0);
 }
 
 .slider-switch__item_current {
     background: #ececec;
-
-    background-color: rgba(236, 236, 236, 1.0);
 }
 
-
-/*
-    Blurbs DIMs: Height { 339 = 341 - 2 * 1px (T & B borders of its Wrapper) }
-
-    Padding-Top: 80 px == 5rem
-
-*/
-.blurbs {
-    box-sizing: border-box;
-
-
-    padding-top: 5rem;
-    padding-top: 4.9375rem;
-    padding-top: 4.875rem;    /* 78px */
-
-    height: 339px;
-
-}
-
-/* Blurb-Item's DIMs :
-    Width x Height: 273 x 190, ==> 273 is now 280px
-
-    Margin-Left : 12px == 0.75rem == 1.25%
-
-*/
-.blurb-item {
-/*    box-sizing: border-box;*/
-    position: relative;
-    float: left;
-
-
-    margin-left: 1.25%;    /* 12px */
-
-    margin-right: 4.6875%;    /* 45px */
-    margin-right: 5.0%;    /* 48px */
-
-    padding-left: 5.208333%;    /* 50px */
-
-    /* 280px for BORDER-BOX, ContentArea will be 223px by Size TOO !!! */
-/*    width: 28.4375%;*/
-
-    /* 230px for box-sizing: PADDING-box */
-    width: 23.95833333333333%;
-
-}
-
-.blurb-item::before {
-    display: block;
-    position: absolute;
-    top: 8px;
-    left: -2px;
-
-    content: '';
-
-    width: 30px;
-    height: 30px;
-
-    background-repeat: no-repeat;
-}
-
-.blurb-item_tool::before {
-    background-image: url("../img/icon-scape-min.png");
-    background-position: -10px -10px;
-}
-
-.blurb-item_mind::before {
-    background-image: url("../img/icon-scape-min.png");
-    background-position: -40px -10px;
-}
-
-.blurb-item_tune::before {
-    background-image: url("../img/icon-scape-min.png");
-    background-position: -70px -10px;
-}
-
-
-.blurb-item:nth-child(3) {
-    margin-right: auto;
-
-    margin-left: 0.8333333333333333%; /* 8px */
-    width: 22.91666666666667%;    /* 220px */
-
-
-    word-spacing: -0.09rem
-
-}
-
-/* a Blurbs Item's Title ::
-    font-size: 30px ==  1.875rem
-
-    Margin-Bottom: 5px = 0.3125rem
-*/
 .blurb-item__title {
-    margin-bottom: 0.3125rem;    /* 5px */
-
-
     color: #ffffff;
 
-    color: rgba(255, 255, 255, 1.0);
+/*    text-shadow: 2px 2px 0px rgba(15, 21, 24, 0.4);*/
 
-    font: 1.875rem/1 "league_gothic", sans-serif;
-    text-transform: uppercase;
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2,
+                Color=#660f1518, Positive='true');
 
-    text-shadow: 2px 2px 0px rgba(15, 21, 24, 0.4);
 }
 
 /* Font-size: 16px = 1rem
