@@ -2,6 +2,8 @@
 *.tmp
 *.log
 test*.*
+00*.*
+00*
 psd/
 MyTestDir/
 00.test/
