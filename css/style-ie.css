@@ -17,8 +17,8 @@
 */
 
     filter: progid:DXImageTransform.Microsoft.gradient(
-    startColorstr=#FF322539, endColorstr=#FF745083
-  );
+        startColorstr=#FF322539, endColorstr=#FF745083
+    );
     background-repeat: no-repeat;
 }
 
@@ -57,7 +57,7 @@ header::before {
 .header-02 {
     background: #482860;
 
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=37)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=37)";
 
 /*    background-color: rgba(72, 40, 95, 0.37);*/
 }
@@ -111,7 +111,7 @@ header::before {
 /*    float: left;*/
 
     background: #000000;
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
 }
 
 /* Slider-item's Title DIMs :
@@ -165,7 +165,7 @@ header::before {
     border: 4px solid #403f49;
 /*    border: 4px solid transparent;*/
 
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
     background: #403f49;
 
 }
@@ -211,64 +211,21 @@ header::before {
 
 .blurb-item__fullinfo-anchor:hover {
 /*    text-shadow: 0px 0px 34px rgba(255, 255, 255, 1.0);*/
-/*    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=0,
-        Color=#ffffffff, Positive='true');*/
-    filter: progid:DXImageTransform.Microsoft.Glow(Color=white,Strength=24);
-
-}
-
-
-/* Content section
-
-Testimonial's Location : X,Y == { 23px, 100px} == { 1.4375rem == 2.395833%, 6.25rem }
-
-*/
-.content-01 {
-    box-sizing: border-box;
-    height: 486px;
-
-    padding-top: 6.25rem;
-}
-
-/*
-    Testimonials DIMs ""
-
-    Width : 427px == 44.479167%
-    Height : 272px == 17rem
-
-    A Testimonial's Triangle-zone : 20px x 20px
-*/
-.testimonials {
-    float: left;
-
-    margin-left: 2.395833%;    /* 23px */
-    margin-right: 2.708333%;    /* 26px with relation to the BLOG-container */
-
-    width: 44.479167%;    /* 427px */
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=0,
+        Color=#ffffffff, Positive='true');
+/*    filter: progid:DXImageTransform.Microsoft.Glow(Color=white,Strength=24);*/
 
 }
 
 
 .testimonials-list {
-    position: relative;
-    box-sizing: border-box;
-    width: 100%;
-
-    padding-top: 2rem; /* 32px */
-
-    /* The static value for padLeft could be used to save the Testimonial's Icon's original size
-    if this icon doesn't scaled when we resize the ViewPort */
-    padding-left: 9.133489%;    /* 39px == 2.4375rem == 9.133489% (to testimonials) */
-    padding-left: 2.4375rem;
-
-    padding-right: 8.196721%;    /* 35px == 8.196721% (to testimonials) == 2.1875rem */
-    padding-bottom: 8.899297%;    /* 38px == 8.899297% (to testimonials) == 2.375rem */
-
-    background-color: rgba(255, 255, 255, 1.0);
+    background: #ffffff;
     /* Test Mark-Up */
     /*background-color: cornsilk;*/
 
-    box-shadow: 0px 1px 2px 0px rgba(153, 153, 153, 0.43);
+/*    box-shadow: 0px 1px 2px 0px rgba(#999999, 0.43);*/
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=1,
+        Color=#70999999, Positive='true');
 
 }
 
@@ -277,668 +234,175 @@ Testimonial's Location : X,Y == { 23px, 100px} == { 1.4375rem == 2.395833%, 6.25
 */
 
 .testimonials-list::after {
-    content: '';
-    /*
-        ◥ (BLACK UPPER RIGHT TRIANGLE) utf-8 character
-        www.utf8icons.com/character/9701/black-upper-right-triangle
+    color: #ffffff;
 
-        www.w3schools.com/charsets/ref_utf_geometric.asp
-
-        graphemica.com/%E2%97%A5
-    */
-    content: '\25E5';
-
-    display: block;
-    position: absolute;
-
-    bottom: -20px;
-    right: 40px;
-
-/*
-    border-top: 10px solid pink;
-    border-right: 10px solid lime;
-    border-bottom: 10px solid brown;
-    border-left: 10px solid yellow;
-*/
-
-/* The main drawback is the shadow around the whole borders !!! */
-/*
-    border-top: 10px solid rgba(255, 255, 255, 1.0);
-    border-right: 10px solid rgba(255, 255, 255, 1.0);
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid transparent;
-*/
-
-    color: rgba(255, 255, 255, 1.0);
-
-    font-size: 1.5625rem;    /* 25px */
-    text-shadow: 1px 2px 1px rgba(153, 153, 153, 0.43);
+/*    text-shadow: 1px 2px 1px rgba(153, 153, 153, 0.43);*/
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=1,
+        Color=#70999999, Positive='true');
 
 }
 
-
-.testimonial-item {
-    position: relative;
-
-    width: 100%;
-
-}
-
-/* Testimonial Item's Title
-    Font-size: 30px == 1.875rem
-
-*/
 .testimonial-item__title {
-    margin-bottom: 0.375rem;    /* 6px */
-
-    color: rgba(69, 69, 69, 1.0);
-
-    font: 1.875rem/1 "league_gothic", sans-serif;
-    text-transform: uppercase;
-
+    color: #454545;
 }
 
 .testimonial-item__title span {
 
-    color: rgba(237, 191, 255, 1.0);
-
-    padding-left: 0.375rem; /* 6px */
-
+    color: #edbfff;
 }
 
 .testimonial-item__brief {
-    color: rgba(69, 69, 69, 1.0);
-
-    font: 1rem/1.5 "open_sanslight", sans-serif;
-
-    word-break: break-all;
+    color: #454545;
 }
 
-.testimonial-item_icon::before {
-    content: '';
-    display: block;
-    position: absolute;
-
-    left: -62px;
-    top: -16px;
-    top: -12px;
-
-    /* 49px { W, H } === 13.88102% of 353px (testimonial-item) */
-    /*width: 13.88102%;*/
-    width: 3.0625rem;
-
-    height: 3.0625rem;    /* 49px == 3.0625rem */
-/*    height: 49px;*/
-
-    background-image: url("../img/icon-scape-min.png");
-    background-position: -260px -10px;
-    background-repeat: no-repeat;
-
-}
-
-.testimonial-switch:nth-child(2) {
-    text-align: center;
-}
-
-.testimonial-switch {
-    height: 1.1875rem;    /* 19px */
-
-    /* 170px == 39.812646% */
-    /*    margin-left: 39.812646%;*/
-    margin-top: 1.5rem;    /* 24px */
-}
-
-/* DIMs { Size : 19px x 19px } */
 .testimonial-switch__item {
-    display: inline-block;
-    box-sizing: border-box;
+    border: 1px solid #ececec;
+    background: #ffffff;
 
-    padding: 2px;
-
-    width: 1.1875rem;    /* 19px */
-    height: 1.1875rem;    /* 19px */
-
-    border: 1px solid rgba(236, 236, 236, 1.0);
-    border-radius: 50%;
-
-    background-color: rgba(255, 255, 255, 1.0);
-
-}
-
-.testimonial-switch__item:nth-child(n+2) {
-    margin-left: -0.25rem;    /* -4px to eliminate the SPACE-char gap */
 }
 
 .testimonial-switch__item_current::before {
-    content: '';
-    display: block;
-    box-sizing: border-box;
+    border: 1px solid #454545;
 
-    width: 100%;
-    height: 100%;
-
-    border: 1px solid rgba(69, 69, 69, 1.0);
-    border-radius: 50%;
-    background-image:
-        linear-gradient(
-            to bottom,
-            rgba(106, 106, 106, 1.0),
-            rgba(69, 69, 69, 1.0)
-        );
+    background: #454545;
 }
 
 .testimonial-switch__item:hover {
-    border-color: rgba(106, 106, 106, 1.0);
+    border-color: #6a6a6a;
 }
 
 
-/* BLOG space
-    DIMs W x H { 450(449)px  x 296px ===  }
 
-*/
-.blog {
-    float: left;
-    box-sizing: border-box;
-    margin-left: 2.395833%;    /* 23px */
-
-    padding-top: 2rem;    /* 32px */
-    padding-left: 0.625rem;    /* 10px == 0.625rem == 1.041667% */
-
-    width: 46.875%;    /* 450px */
-}
-
-/* Blog's Font-size: 30px == 1.875rem */
 .blog__title {
-    margin-bottom: 0.8125rem;    /* 13px */
-
-    color: rgba(69, 69, 69, 1.0);
-
-    font: 1.875rem/1 "league_gothic", sans-serif;
-    text-transform: uppercase;
-}
-
-.blog__list-item {
-    position: relative;
-
-    margin-bottom: 1.1875rem;    /* 19px */
-
-    padding-left: 4.25rem;    /* 68px == 15.454545% == 4.25rem */
-}
-
-
-.blog__list-item:nth-child(2) {
-    margin-bottom: 0.9375rem;    /* 15px */
-}
-
-.blog__list-item:nth-child(3) {
-    margin-bottom: 1.375rem;    /* 22px */
-}
-
-.blog__list-item::before {
-    content: '';
-    display: block;
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    width: 49px;
-    height: 49px;
-}
-
-.blog__list-item:first-child::before {
-    background-image: url("../img/icon-scape-min.png");
-    background-position: -310px -10px;
-    background-repeat: no-repeat;
-}
-
-.blog__list-item:nth-child(2)::before {
-    background-image: url("../img/icon-scape-min.png");
-    background-position: -360px -10px;
-    background-repeat: no-repeat;
-}
-
-.blog__list-item:nth-child(3)::before {
-    background-image: url("../img/icon-scape-min.png");
-    background-position: -410px -10px;
-    background-repeat: no-repeat;
+    color: #454545;
 }
 
 .blog__list-item-title {
-    color: rgba(69, 69, 69, 1.0);
-
-    font: 1rem/1.5 "open_sansextrabold", sans-serif;
+    color: #454545;
 }
 
 .blog__list-item-brief {
-    color: rgba(69, 69, 69, 1.0);
-
-    font: 1rem/1.5 "open_sanslight", sans-serif;
-    word-spacing: -0.03rem;
+    color: #454545;
 }
 
 .blog__fullinfo-anchor {
-    float: right;
-/*    display: block;*/
-
-    margin-right: 0.6875rem;    /* 11px */
-
-    font: 1.125rem/1.5 "league_gothic", sans-serif;
-
-    text-decoration: none;
-    text-transform: uppercase;
-
-    color: rgba(69, 69, 69, 1.0);
+    color: #454545;
 }
 
-.anchor-02_presence {
-    display: none;
-}
 
-/* Brands DIMs :
-    Size, Margin-Right
-        b<1/BillaBong>
-            Size : 69 x 64
-            MR = 65px ==
-        b<2/dcshoecousa>
-            Size : 72 x 64
-            MR = 65px ==
-        b<3/Element>
-            Size : 65 x 64(65)
-            !!!!!!!
-            MR = 75px ==
-        b<4/AWSM>
-            Size : 50 x 64
-            MR = 65px ==
-        b<5/RVCA>
-            Size : 103 x 64
-            MR = 65px ==
-        b<6/VonZipper>
-            Size : 78 x 64
-            MR
-*/
-
-.brand-list {
-    box-sizing: border-box;
-
-    /* As it turned out, here is the very Important thing for me, for my flex block !!!
-        I have to set WIDTH for 100% !!!!
-        But I need to know the explanation why this helps me not to shrink
-        all its content down !!!
-    */
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    align-items: center;
-    align-items: flex-start;
-    padding-top: 1.5625rem;    /* 25px */
-
-    height: 100%;
-
-    /* Test Mark-Up */
-/*    background-color: cornsilk;*/
-
-}
-
-.brand-list__item {
-    margin-right: 6.770833%;    /* 65px == 4.0625rem == 6.770833% */
-
-    height: 4rem;    /* 64px */
-
-}
-
-.brand-list__anchor {
-    display: block;
-    width: 100%;
-    height: 100%;
-
-    /*    background-image: url("<some-image-name>");    */
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% auto;
-}
-
-.brand-list__item_billabong {
-    width: 4.3125rem;    /* 69px == 4.3125rem == 7.1875% (of 960px) */
-}
-
+/*
 .brand-list__anchor_billabong {
     background-image: url("../img/01-brand-icon-Billabong.svg");
-}
-
-
-.brand-list__item_dcshoecousa {
-    width: 4.5rem;    /* 72px == 4.5rem == 7.5% (of 960px) */
 }
 
 .brand-list__anchor_dcshoecousa {
     background-image: url("../img/02-brand-icon-dcshoecousa.svg");
 }
 
-
-.brand-list__item_element {
-    margin-right: 7.8125%;    /* 75px == 4.6875rem = 7.8125% (of 960px) */
-
-    width: 4.0625rem;    /* 65px == 4.0625rem == 6.770833% (of 960px) */
-}
-
 .brand-list__anchor_element {
     background-image: url("../img/03-brand-icon-Element.svg");
-}
-
-
-.brand-list__item_awsm {
-    width: 3.125rem;    /* 50px == 3.125rem == 5.208333% (of 960px) */
 }
 
 .brand-list__anchor_awsm {
     background-image: url("../img/04-brand-icon-AWSM.svg");
 }
 
-
-.brand-list__item_rvca {
-    width: 6.4375rem;    /* 103px == 6.4375rem == 10.729167% (of 960px) */
-}
-
 .brand-list__anchor_rvca {
     background-image: url("../img/05-brand-icon-RVCA.svg");
-}
-
-
-.brand-list__item_vonzipper {
-
-    width: 4.6875rem;    /* 78px = 4.6875rem == 7.8125% (of 960px) */
 }
 
 .brand-list__anchor_vonzipper {
     background-image: url("../img/06-brand-icon-VonZipper.svg");
 }
 
-
-.brand-list__item:last-child {
-    margin-right: 0;
-}
-
-
-/*     Content 02 SPACE definitions :
-
-    Screen WIDTHs wider than 768 pixels :
-    a) CompanyInfo and RecentComments blocks are shown.
-    NEWS Blocks are shown in quantity of 1 !!!
-
-    b) News blocks are shown in quantity of 3 here.
-    CompanyInfo and RecentComments blocks are turned OFF !
-
 */
 
-.content-02 {
-    box-sizing: border-box;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    flex-wrap: wrap;
-}
-
-.content-02 article {
-}
-
-/* DIMs
-        W x H { 285px x 205px == 29.6875% x 12,8125rem }
-*/
-.company-info,
-.recent-comments,
-.news-categories {
-    overflow: hidden;
-
-    width: 29.6875%;    /* 285px */
-    height: 12.8125rem;    /* 205px */
-}
-
-/* Font-Size: 48px == 3rem, PS's Line-Height 33.72px == 2,1075rem */
 .company-info__title {
-    margin-bottom: 0.5rem; /* 8px */
+    color: #454545;
 
-    color: rgba(69, 69, 69, 1.0);
+/*    text-shadow: 0px 2px rgba(255, 255, 255, 1.0);*/
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2,
+        Color=#ffffffff, Positive='true');
 
-    font: 3rem/1 "league_gothic", sans-serif;
-
-    text-transform: uppercase;
-
-    text-shadow: 0px 2px rgba(255, 255, 255, 1.0);
 }
 
 .company-info__title span {
-    color: rgba(185, 185, 185, 1.0);
+    color: #b9b9b9;
 }
 
 .company-info__copyright {
-    margin-bottom: 0.5rem; /* 8px */
+    color: #c6c6c6;
 
-    color: rgba(197, 197, 197, 1.0);
-
-    font: 1rem/1.5 Georgia, serif;
-    font-style: italic;
-
-    text-shadow: 1px 1px rgba(255, 255, 255, 1.0);
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=1,
+        Color=#ffffffff, Positive='true');
 }
 
 .company-info__brief {
-    color: rgba(120, 120, 120, 1.0);
+    color: #787878;
 
-    font: 1rem/1.5 "open_sanslight", sans-serif;
-
-    text-shadow: 1px 1px rgba(255, 255, 255, 1.0);
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=1,
+        Color=#ffffffff, Positive='true');
 }
 
 
 /* Font DIMs : 30px/24px == 1,875rem/0,8(1.5rem) */
 .recent-comments__title {
-    margin-bottom: 0.5625rem;    /* 9px */
+    color: #454545;
 
-    color: rgba(69, 69, 69, 1.0);
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=1,
+        Color=#ffffffff, Positive='true');
 
-    font: 1.875rem/1 "league_gothic", sans-serif;
-
-    text-transform: uppercase;
-
-    text-shadow: 0px 1px rgba(255, 255, 255, 1.0);
 }
 
 .recent-comments__brief {
-    color: rgba(120, 120, 120, 1.0);
+    color: #787878;
 
     font: 1rem/1.5 "open_sanslight", sans-serif;
 
-    text-shadow: 1px 1px rgba(255, 255, 255, 1.0);
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=1,
+        Color=#ffffffff, Positive='true');
+
 }
 
-
-/* News Categories .....
-
-    N.B. NEWS Blocks are shown in quantity of 1 for 768+ screens !!!
-
-*/
-
-.news-categories:nth-child(n+4) {
-    display: none;
-}
-
-/* Font DIMs : 30px/24px == 1,875rem/0,8(1.5rem) */
 .news-categories__title {
-    margin-bottom: 0.5625rem;    /* 9px */
+    color: #454545;
 
-    color: rgba(69, 69, 69, 1.0);
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=1,
+        Color=#ffffffff, Positive='true');
 
-    font: 1.875rem/1 "league_gothic", sans-serif;
-
-    text-transform: uppercase;
-
-    text-shadow: 0px 1px rgba(255, 255, 255, 1.0);
 }
 
 .news-categories__brief {
-    color: rgba(120, 120, 120, 1.0);
+    color: #787878;
 
     font: 1rem/1.5 "open_sanslight", sans-serif;
 
-    text-shadow: 1px 1px rgba(255, 255, 255, 1.0);
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=1,
+        Color=#ffffffff, Positive='true');
+
 }
 
 
 /* Footer space goes here .... */
 
-/* DIMS W x H { 550px x 15px === } */
-.menu_footer {
-    float: left;
-    margin-top: 3rem;    /* 48px == 3rem */
-
-    width: 57.291667%;    /* 550px */
-
-}
-
-.menu__item_footer {
-    /* 44px == 2.75rem === 8% of 550px (i.e. menu_footer) */
-    margin-right: 8%;
-
-    /* 30px since I've left L,R-padding for a Menu's Anchor */
-    margin-right: 5.454545%;
-}
-
-.menu__item_footer:last-child {
-    margin-right: 0; /* there's no margin-Right */
-}
-
 .menu__link_footer {
     border-bottom: 2px solid transparent;
 
-    padding-left: 0.437500rem;    /* 7px */
-    padding-right: 0.437500rem;    /* 7px */
+    color: #ffffff;
 
-    color: rgba(255, 255, 255, 1.0);
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2,
+        Color=#70ffffff, Positive='true');
 
-    font-size: 1.25rem;    /* 20px */
-    line-height: 1;
-
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
-.menu__item_footer:last-child {
-    margin-right: 0;
-}
-
-.menu__item_footer:first-child .menu__link_footer {
-    padding-left: 0;
-}
-
-/* Font-Size { 12px },  Line-Height { 33.72px == 2,1075rem } */
 .author-info {
-    float: right;
-
-    width: 9rem;    /* 144px == 15% of 960 == 9rem */
-    margin-top: 3.375rem;    /* 54px == 3,375rem */
-
-    /* -6px
-        N.B. !!!
-        By design-template the text crosses the 960px boundary
-        There is a negativr-valur roghtMargin.
-        But I turned off it at the moment !
-    */
-    /*margin-right: -0.375rem;    */
-
-    font: 0.75rem/1 "open_sanslight", sans-serif;    /* 12px */
-    /* the Photoshop : 33.72px == 2,1075rem */
-    /*line-height: 2.1075rem;*/
-
-    color: rgba(255, 255, 255, 1.0);
+    color: #ffffff;
     /* Test Mark-Up */
     color: cornsilk;
 
 
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-}
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2,
+        Color=#70ffffff, Positive='true');
 
-.author-info span {
-    font-family: "open_sansextrabold", sans-serif;
-}
-
-
-/* SLIDER's arrows
-    DIMs W x H { 22 x 34 }
-
-    The initial positions fos screens, viewports :
-        { 960px < } === 318px == 19,875rem left/right away from 960px working zone
-*/
-
-.slider__arrow {
-    position: absolute;
-    top: 11.4375rem;        /* 183px */
-
-    width: 22px;
-    height: 34px;
-
-    background-size: 22px 34px;
-}
-
-.slider__arrow_left {
-    left: -19.875rem;        /* -318px for left edge of the Left Arrow */
-
-    background-image: url("../img/slider-left-angle-bracket.svg");
-}
-
-.slider__arrow_right {
-    /* 318px - 22px == 296px (18,5rem) */
-    right: -19.875rem;    /* -318px for right edge of the Right Arrow */
-
-    background-image: url("../img/slider-right-angle-bracket.svg");
-}
-
-/*
-.slider__arrow_left:hover {
-    background-color: cornsilk;
-    background-color: rgba(78, 205, 78, 0.23);
-}
-
-.slider__arrow_right:hover {
-    background-color: rgba(78, 205, 78, 0.23);
-    background-color: rgba(187, 198, 88, 0.23);
-}
-*/
-
-@media screen and ( max-width : 1840px ) {
-    .slider__arrow_left {
-        left: -9.875rem;
-    }
-
-    .slider__arrow_right {
-        right: -9.875rem;
-    }
-}
-
-@media screen and ( max-width : 1530px ) {
-    /* the Arrow Width : 22px = 1.375rem */
-    .slider__arrow_left {
-        left: -2rem;
-    }
-
-    .slider__arrow_right {
-        right: -2rem;
-    }
-}
-
-@media screen and ( min-width: 977px ) and ( max-width : 1280px ),
-    screen and ( min-width: 786px ) and ( max-width : 976px )
-     {
-    /* the Arrow Width : 22px = 1.375rem */
-    .slider__arrow_left {
-        display: none;
-    }
-
-    .slider__arrow_right {
-        display: none;
-    }
 }
